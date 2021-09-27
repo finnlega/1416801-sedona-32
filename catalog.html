@@ -117,11 +117,14 @@
           <button class="range-toggle toggle-max" type="button">
             <span class="visually-hidden">Изменить максимальную стоимость.</span>
           </button>
+          <!--Как сделать внешнюю рамку у поля ввода диапазона значений
+            стоимости? Если обернуть строки 123-128 в div и указать у input
+            толщину рамки 0, такой вариант можно использовать?-->
           <label class="catalog-filter-label">
-            <input class="catalog-filter-input" type="number" name="min-cost"> от
+            <input class="catalog-filter-input" type="number" name="min-cost" placeholder="0"> от
           </label>
           <label class="catalog-filter-label">
-            <input class="catalog-filter-input" type="number" name="max-cost"> до
+            <input class="catalog-filter-input" type="number" name="max-cost" placeholder="9000"> до
           </label>
         </fieldset>
         <button class="button-accept" type="submit">Применить</button>
