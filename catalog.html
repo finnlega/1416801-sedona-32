@@ -54,9 +54,9 @@
         </li>
       </ul>
     </header>
-    <section class="catalog-hotels">
+    <section class="catalog-filter">
       <h2 class="visually-hidden">Фильтры:</h2>
-      <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
+      <form class="catalog-filter-form" action="https://echo.htmlacademy.ru/" method="get">
         <fieldset class="catalog-filter-group">
           <legend class="catalog-filter-title">Инфраструктура:</legend>
           <ul class="catalog-filter-list">
@@ -81,7 +81,7 @@
                 <span class="control-label">wi-fi</span>
               </label>
             </li>
-            </ul>
+          </ul>
         </fieldset>
         <fieldset class="catalog-filter-group">
           <legend class="catalog-filter-title">Тип жилья:</legend>
@@ -117,9 +117,6 @@
           <button class="range-toggle toggle-max" type="button">
             <span class="visually-hidden">Изменить максимальную стоимость.</span>
           </button>
-          <!--Как сделать внешнюю рамку у поля ввода диапазона значений
-            стоимости? Если обернуть строки 123-128 в div и указать у input
-            толщину рамки 0, такой вариант можно использовать?-->
           <label class="catalog-filter-label">
             <input class="catalog-filter-input" type="number" name="min-cost" placeholder="0"> от
           </label>
@@ -149,68 +146,95 @@
       <a class="button-sort button-current" href="#">
         <span class="visually-hidden">Показать список</span>
       </a>
-      <div class="hotel-card">
-        <ul class="hotel-card-list">
-          <li class="hotel-card-item">
-            <a class="hotel-card-link" href="#">
-              <img class="hotel-card-image" src="" alt="Гостиница Амара в горах">
-              <h3 class="hotel-card-title">Amara Resort & Spa</h3>
-            </a>
-            <span class="visually-hidden">Количество звезд</span>
-            <p class="hotel-card-wrap">
-              <span class="hotel-card-type">Гостиница</span>
-              <span class="hotel-card-price">От 4000 ₽</span>
-            </p>
-            <a href="#" class="hotel-card-button button-description">Подробнее</a>
-            <a href="#" class="hotel-card-button button-favorites">В избранное</a>
-            <a href="#" class="hotel-card-button button-rating">Рейтинг: 8,5</a>
-          </li>
-          <li class="hotel-card-item">
-            <a class="hotel-card-link" href="#">
-              <img class="hotel-card-image" src="" alt="Мотель Дезерт в каньоне">
-              <h3 class="hotel-card-title">Desert Quail Inn</h3>
-            </a>
-            <span class="visually-hidden">Количество звезд</span>
-            <p class="hotel-card-wrap">
-              <span class="hotel-card-type">Мотель</span>
-              <span class="hotel-card-price">От 3000 ₽</span>
-            </p>
-            <a href="#" class="hotel-card-button button-description">Подробнее</a>
-            <a href="#" class="hotel-card-button button-favorites">В избранное</a>
-            <a href="#" class="hotel-card-button button-rating">Рейтинг: 8,9</a>
-          </li>
-          <li class="hotel-card-item">
-            <a class="hotel-card-link" href="#">
-              <img class="hotel-card-image" src="" alt="Вилла с видом на скальный уступ">
-              <h3 class="hotel-card-title">Villas at Poco Diablo</h3>
-            </a>
-            <span class="visually-hidden">Количество звезд</span>
-            <p class="hotel-card-wrap">
-              <span class="hotel-card-type">Апартаменты</span>
-              <span class="hotel-card-price">От 2000 ₽</span>
-            </p>
-            <a href="#" class="hotel-card-button button-description">Подробнее</a>
-            <a href="#" class="hotel-card-button button-favorites-add">В избранное</a>
-            <a href="#" class="hotel-card-button button-rating">Рейтинг: 9,2</a>
-          </li>
-          <li class="hotel-card-item">
-            <a class="hotel-card-link" href="#">
-              <img class="hotel-card-image" src="" alt="Гостиница в долине реки">
-              <h3 class="hotel-card-title">GreenTree Inn</h3>
-            </a>
-            <span class="visually-hidden">Количество звезд</span>
-            <p class="hotel-card-wrap">
-              <span class="hotel-card-type">Гостиница</span>
-              <span class="hotel-card-price">От 3000 ₽</span>
-            </p>
-            <a href="#" class="hotel-card-button button-description">Подробнее</a>
-            <a href="#" class="hotel-card-button button-favorites">В избранное</a>
-            <a href="#" class="hotel-card-button button-rating">Рейтинг: 9,2</a>
-          </li>
-        </ul>
-      </div>
+    </section>
+    <section class="hotel-card">
+      <h2 class="visually-hidden">Каталог гостиниц</h2>
+      <ul class="hotel-card-list">
+        <li class="hotel-card-item">
+          <a class="hotel-card-link" href="#">
+            <img class="hotel-card-image" src="" alt="Гостиница Амара в горах">
+          </a>
+          <a class="hotel-card-link" href="#">
+            <h3 class="hotel-card-title">Amara Resort & Spa</h3>
+          </a>
+          <div class="show-rating">
+            <img class="show-rating-image" src="" alt="У гостиницы Амара 4 звезды">
+            <img class="show-rating-image" src="" alt="">
+            <img class="show-rating-image" src="" alt="">
+            <img class="show-rating-image" src="" alt="">
+          </div>
+          <p class="hotel-card-wrap">
+            <span class="hotel-card-type">Гостиница</span>
+            <span class="hotel-card-price">От 4000 ₽</span>
+          </p>
+          <a href="#" class="hotel-card-button button-description">Подробнее</a>
+          <a href="#" class="hotel-card-button button-favorites">В избранное</a>
+          <a href="#" class="hotel-card-button button-rating">Рейтинг: 8,5</a>
+        </li>
+        <li class="hotel-card-item">
+          <a class="hotel-card-link" href="#">
+            <img class="hotel-card-image" src="" alt="Мотель Дезерт в каньоне">
+          </a>
+          <a class="hotel-card-link" href="#">
+            <h3 class="hotel-card-title">Desert Quail Inn</h3>
+          </a>
+          <div class="show-rating">
+            <img class="show-rating-image" src="" alt="У мотеля Дезерт 3 звезды">
+            <img class="show-rating-image" src="" alt="">
+            <img class="show-rating-image" src="" alt="">
+          </div>
+          <p class="hotel-card-wrap">
+            <span class="hotel-card-type">Мотель</span>
+            <span class="hotel-card-price">От 3000 ₽</span>
+          </p>
+          <a href="#" class="hotel-card-button button-description">Подробнее</a>
+          <a href="#" class="hotel-card-button button-favorites">В избранное</a>
+          <a href="#" class="hotel-card-button button-rating">Рейтинг: 8,9</a>
+        </li>
+        <li class="hotel-card-item">
+          <a class="hotel-card-link" href="#">
+            <img class="hotel-card-image" src="" alt="Вилла с видом на скальный уступ">
+          </a>
+          <a class="hotel-card-link" href="#">
+            <h3 class="hotel-card-title">Villas at Poco Diablo</h3>
+          </a>
+          <div class="show-rating">
+            <img class="show-rating-image" src="" alt="У виллы 2 звезды">
+            <img class="show-rating-image" src="" alt="">
+          </div>
+          <p class="hotel-card-wrap">
+            <span class="hotel-card-type">Апартаменты</span>
+            <span class="hotel-card-price">От 2000 ₽</span>
+          </p>
+          <a href="#" class="hotel-card-button button-description">Подробнее</a>
+          <a href="#" class="hotel-card-button button-favorites-add">В избранное</a>
+          <a href="#" class="hotel-card-button button-rating">Рейтинг: 9,2</a>
+        </li>
+        <li class="hotel-card-item">
+          <a class="hotel-card-link" href="#">
+            <img class="hotel-card-image" src="" alt="Гостиница Зеленое дерево в долине реки">
+          </a>
+          <a class="hotel-card-link" href="#">
+            <h3 class="hotel-card-title">GreenTree Inn</h3>
+          </a>
+          <div class="show-rating">
+            <img class="show-rating-image" src="" alt="У гостиницы Зеленое дерево 2 звезды">
+            <img class="show-rating-image" src="" alt="">
+          </div>
+          <p class="hotel-card-wrap">
+            <span class="hotel-card-type">Гостиница</span>
+            <span class="hotel-card-price">От 3000 ₽</span>
+          </p>
+          <a href="#" class="hotel-card-button button-description">Подробнее</a>
+          <a href="#" class="hotel-card-button button-favorites">В избранное</a>
+          <a href="#" class="hotel-card-button button-rating">Рейтинг: 9,2</a>
+        </li>
+      </ul>
+    </section>
+    <section class="pagination">
+      <h2 class="visually-hidden">Пагинация</h2>
       <button class="button-pagination" type="button">Загрузить еще</button>
-      <ul class="pagination">
+      <ul class="pagination-list">
         <li class="pagination-item">
           <a class="pagination-link pagination-current">1</a>
         </li>
@@ -281,5 +305,3 @@
 </body>
 
 </html>
-
-
