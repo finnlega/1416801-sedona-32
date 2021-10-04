@@ -1,0 +1,56 @@
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/ptsans-400.woff2") format("woff2");
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/fonts/ptsans-700.woff2") format("woff2");
+
+  font-display: swap;
+}
+
+body {
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  background-color: #F2F2F2;
+  color: #000000;
+}
+
+.page-header {
+  background-color: #FFFFFF;
+}
+
+.navigation-link {
+  color: inherit;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 26px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.main-index {
+  background-color: #FFFFFF;
+  background-image: url("/img/welcome.png"),
+                    url("/img/divider.png"),
+                    url("/img/index-background.jpg");
+  background-repeat: no-repeat;
+}
+
+.set-theme {
+  background-image:url("/img/subscription.jpg");
+  background-repeat:no-repeat;
+}
+
+.main-inner {
+  background-color: #FFFFFF;
+  color: #000000;
+}
