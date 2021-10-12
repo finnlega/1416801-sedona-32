@@ -18,11 +18,15 @@
 
 html {
   height: 100%;
+  background-color: #E5E5E5;
+  color: #000000;
+
 }
 
 body {
-  margin: 0;
+  margin: 0 auto;
   min-height: 100%;
+  width: 1280px;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
@@ -36,13 +40,13 @@ body {
 .page-footer {
   background-color: #FFFFFF;
   color: #000000;
+  width: 1200px;
+  margin: 0 auto;
 }
 
 /* Навигация*/
 .navigation {
   display: flex;
-  width: 1200px;
-  margin: 0 auto;
 }
 
 .navigation-list {
@@ -75,6 +79,7 @@ body {
  .logo {
   display: block;
   margin: 0 auto;
+
 }
 /* Кнопки карточек каталога и ссылок навигации на первой и второй странице*/
 
@@ -154,13 +159,12 @@ body {
   text-transform: uppercase;
 }
 
-
 .advantages-number {
   text-align: center;
   text-transform: uppercase;
 }
 
- .color-container {
+.color-container {
   width: 400px;
   height: 384px;
   text-align: center;
@@ -234,7 +238,6 @@ body {
   background-color: #756257;
   border-radius: 10px;
   width: 575px;
-  height: 60px;
 }
 
 .set-theme {
@@ -266,7 +269,7 @@ body {
 .page-footer {
   width: 1200px;
   margin: 0 auto;
-  height: 120px;
+  /* height: 120px; */
 }
 
 .footer-wrapper {
@@ -300,12 +303,20 @@ body {
   background-repeat: no-repeat;
   color: #FFFFFF;
   font-style: normal;
+  display: flex;
+  flex-direction: column;
 }
 
 .inner-header-title {
   font-weight: bold;
   font-size: 60px;
   line-height: 78px;
+  margin: 0;
+
+}
+
+.breadcrumbs {
+  margin: 0;
 }
 
 .breadcrumbs-item {
@@ -316,10 +327,20 @@ body {
 
 /* Фильтры, карточки гостинииы */
 
+.catalog-filter-form {
+  display: flex;
+  justify-content: space-around;
+  width: 815px;
+}
+
 .catalog-filter-title {
   font-weight: bold;
   font-size: 20px;
   line-height: 26px;
+}
+
+.catalog-filter-group {
+  width: 200px;
 }
 
 .catalog-filter-item,
@@ -337,6 +358,10 @@ body {
   border-radius: 4px;
 }
 
+.sorting {
+  display: flex;
+}
+
 .sorting-search {
   font-weight: bold;
   font-size: 30px;
@@ -348,6 +373,18 @@ body {
   font-size: 24px;
   line-height: 31px;
   color: #000000;
+}
+
+.hotel-card-list {
+  display: flex;
+  flex-direction:column;
+  flex-wrap:wrap;
+}
+
+.hotel-card-wrap {
+  display: flex;
+  width: 235px;
+  justify-content: space-between;
 }
 
 .button-description {
@@ -392,5 +429,23 @@ body {
   color: #000000;
 }
 
+.pagination-item {
+  width: 55px;
+  height: 55px;
+  background-color: #83B3D3;
+  color: #FFFFFF;
+}
 
+.pagination-box {
+  display: flex;
+  width: 1056px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.pagination-list {
+  display: flex;
+  width: 368px;
+  justify-content: space-between;
+}
 
