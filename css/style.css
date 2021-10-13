@@ -108,9 +108,9 @@ body {
 }
 
 .main-wrap {
-  background-image: url("/img/welcome.png"),
-    url("/img/divider.png"),
-    url("/img/index-background.jpg");
+  background-image: url("../img/welcome.png"),
+    url("../img/divider.png"),
+    url("../img/index-background.jpg");
   background-repeat: no-repeat;
   height: 485px;
 }
@@ -241,7 +241,7 @@ body {
 }
 
 .set-theme {
-  background-image: url("/img/subscription.jpg");
+  background-image: url("../img/subscription.jpg");
   background-repeat: no-repeat;
   color: #FFFFFF;
   width: 1200px;
@@ -312,7 +312,6 @@ body {
   font-size: 60px;
   line-height: 78px;
   margin: 0;
-
 }
 
 .breadcrumbs {
