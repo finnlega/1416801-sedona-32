@@ -18,22 +18,36 @@
 
 html {
   height: 100%;
-  background-color: #E5E5E5;
-  color: #000000;
-
 }
 
 body {
   margin: 0 auto;
   min-height: 100%;
-  width: 1280px;
+  min-width: 1200px;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
-  background-color: #F2F2F2;
-  color: #000000;
   display: flex;
   flex-direction: column;
+  background-color: #F2F2F2;
+  color: #000000;
+}
+
+/* Скрыть заголовки с классом visually-hidden */
+/*
+. {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+} */
+
+.page-wrapper {
+  box-shadow: 0px 0px 15px #cccccc;
 }
 
 .page-header,
@@ -53,11 +67,18 @@ body {
   margin: 0;
   padding: 0;
   width: 435px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navigation-item {
+  list-style-type: none;
 }
 
 .navigation-user {
   max-width: 260px;
-  margin-left: auto;
+  padding-left: 209px;
 }
 
 .navigation-link {
@@ -76,11 +97,11 @@ body {
   text-align: center;
 }
 
- .logo {
+.logo {
   display: block;
-  margin: 0 auto;
-
+  padding-left: 96px;
 }
+
 /* Кнопки карточек каталога и ссылок навигации на первой и второй странице*/
 
 .button-small,
@@ -120,6 +141,7 @@ body {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+  margin: 0;
 }
 
 .main-description {
@@ -351,6 +373,11 @@ body {
   line-height: 23px;
 }
 
+.button-box {
+  display: flex;
+  flex-direction: column;
+}
+
 .button-accept {
   background-color: #83B3D3;
   color: #FFFFFF;
@@ -440,6 +467,7 @@ body {
   width: 1056px;
   margin: 0 auto;
   justify-content: space-between;
+  align-items: baseline;
 }
 
 .pagination-list {
