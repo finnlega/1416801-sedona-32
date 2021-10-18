@@ -31,11 +31,12 @@ body {
   flex-direction: column;
   background-color: #F2F2F2;
   color: #000000;
+
 }
 
 /* Скрыть заголовки с классом visually-hidden */
-/*
-. {
+
+.visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -44,7 +45,7 @@ body {
   border: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
-} */
+}
 
 .page-wrapper {
   box-shadow: 0px 0px 15px #cccccc;
@@ -56,11 +57,13 @@ body {
   color: #000000;
   width: 1200px;
   margin: 0 auto;
+
 }
 
 /* Навигация*/
 .navigation {
   display: flex;
+  justify-content: space-between;
 }
 
 .navigation-list {
@@ -68,17 +71,12 @@ body {
   padding: 0;
   width: 435px;
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
   align-items: center;
 }
 
 .navigation-item {
   list-style-type: none;
-}
-
-.navigation-user {
-  max-width: 260px;
-  padding-left: 209px;
 }
 
 .navigation-link {
@@ -87,6 +85,31 @@ body {
   font-size: 20px;
   line-height: 26px;
   text-decoration: none;
+  text-align: center;
+  display: block;
+  padding: 6px 12px;
+  margin-right: 9px;
+}
+
+
+.navigation-item:nth-child(3n+1) {
+  padding-left: 59px;
+
+}
+
+.navigation-user {
+  max-width: 255px;
+  margin-left: auto;
+}
+
+.navigation-user .navigation-item:first-child {
+  padding-left: 0;
+}
+
+.navigation-user .navigation-link {
+  min-width: 18px;
+  min-height: 18px;
+  padding: 10px 10px;
 }
 
 .navigation-user li:nth-of-type(3) {
@@ -95,6 +118,10 @@ body {
   border-radius: 4px;
   width: 160px;
   text-align: center;
+}
+
+.navigation-user:nth-child(3) {
+  padding-right: 72px;
 }
 
 .logo {
@@ -129,11 +156,21 @@ body {
 }
 
 .main-wrap {
-  background-image: url("../img/welcome.png"),
+
+  /* background-image: url("../img/welcome.png"),
     url("../img/divider.png"),
     url("../img/index-background.jpg");
   background-repeat: no-repeat;
-  height: 485px;
+  background-position: center; */
+  background: url("../img/welcome.png") no-repeat top 51px center,
+  url("../img/divider.png") no-repeat center top 429px,
+  url("../img/index-background.jpg") no-repeat;
+
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
 }
 
 .main-title {
@@ -141,7 +178,10 @@ body {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+  width: 720px;
   margin: 0;
+  padding-top: 548px;
+  margin-bottom: 23px;
 }
 
 .main-description {
@@ -149,6 +189,8 @@ body {
   font-size: 22px;
   line-height: 36px;
   color: #333333;
+  margin: 0;
+  padding-bottom: 79px;
 }
 
 /* Преимущества*/
@@ -158,6 +200,7 @@ body {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
+  align-items:center;
 }
 
 .advantages-item {
@@ -181,9 +224,37 @@ body {
   text-transform: uppercase;
 }
 
+h3.advantages-title {
+  padding-top: 98px;
+  margin-bottom: 25px;
+}
+
+
+
 .advantages-number {
   text-align: center;
   text-transform: uppercase;
+}
+
+.advantages-description {
+  margin: 0;
+}
+
+p.advantages-description {
+  margin-top: 26px;
+  width: 220px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+p.wide {
+  width: 250px;
+}
+
+h4.advantages-title {
+  padding-top: 184px;
+  margin-bottom: 20px;
 }
 
 .color-container {
@@ -194,6 +265,12 @@ body {
 
 .element {
   display: flex;
+
+}
+
+.element-reverse {
+  display: flex;
+  flex-direction:row-reverse;
 }
 
 .blue-theme {
@@ -224,6 +301,8 @@ body {
   line-height: 26px;
   min-height: 417px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .subscription {
@@ -231,6 +310,8 @@ body {
   font-size: 22px;
   line-height: 26px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .search-title,
@@ -239,6 +320,20 @@ body {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+  margin: 0;
+}
+
+h2.search-title {
+  padding-top: 91px;
+  margin-bottom: 15px;
+}
+
+p.search-description {
+  margin: 0;
+  margin-bottom: 73px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 720px;
 }
 
 .search-description,
@@ -260,6 +355,9 @@ body {
   background-color: #756257;
   border-radius: 10px;
   width: 575px;
+  height: 60px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .set-theme {
@@ -270,11 +368,31 @@ body {
   height: 411px;
 }
 
+h2.subscription-title {
+  padding-top: 94px;
+  margin-bottom: 15px;
+}
+
+p.subscription-description {
+  margin: 0;
+  margin-bottom: 26px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 720px;
+}
+
+.subscription-email {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
 .subscription-button {
   line-height: 26px;
   background: #83B3D3;
   width: 200px;
   border-radius: 0px 10px 10px 0px;
+  height: 60px;
 }
 
 .field {
@@ -285,20 +403,45 @@ body {
   border-radius: 10px 0 0 10px;
   width: 600px;
   border-width: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.btn {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  border-width: 0;
+  display: block;
 }
 
 /* footer*/
 .page-footer {
   width: 1200px;
   margin: 0 auto;
-  /* height: 120px; */
 }
 
 .footer-wrapper {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-around;
+  align-items: center;
+  height: 120px;
 }
+
+.footer-social-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  list-style-type: none;
+}
+
+.footer-social-item {
+  width: 40px;
+  height: 40px;
+}
+
 
 .footer-contact {
   font-style: normal;
@@ -327,6 +470,8 @@ body {
   font-style: normal;
   display: flex;
   flex-direction: column;
+  height: 408px;
+  margin-bottom: 44px;
 }
 
 .inner-header-title {
@@ -334,19 +479,36 @@ body {
   font-size: 60px;
   line-height: 78px;
   margin: 0;
+  margin-top: 35px;
+  margin-left: 71px;
+  margin-bottom: 5px;
 }
 
 .breadcrumbs {
   margin: 0;
+  display: flex;
+  padding: 0;
+  list-style-type: none;
 }
 
 .breadcrumbs-item {
   font-weight: normal;
   font-size: 16px;
   line-height: 21px;
+  margin-bottom: 45px;
+}
+
+.breadcrumbs-item:first-child {
+  margin-left: 73px;
+  margin-right: 26px;
+  width: 28px;
+  height: 27px;
 }
 
 /* Фильтры, карточки гостинииы */
+.filter-wrap {
+  margin-left: 71px;
+}
 
 .catalog-filter-form {
   display: flex;
@@ -362,6 +524,9 @@ body {
 
 .catalog-filter-group {
   width: 200px;
+  margin: 0;
+  padding: 0;
+  border-width: 0;
 }
 
 .catalog-filter-item,
@@ -386,12 +551,25 @@ body {
 
 .sorting {
   display: flex;
+  margin-bottom: 42px;
+  align-items: center;
 }
 
 .sorting-search {
   font-weight: bold;
   font-size: 30px;
   line-height: 39px;
+  margin-left: 71px;
+  margin-right: 192px;
+
+}
+
+.select-control {
+  width: 287px;
+  height: 48px;
+  box-sizing: border-box;
+  border: 2px solid #E6E6E6;
+  border-radius: 4px;
 }
 
 .hotel-card-title {
