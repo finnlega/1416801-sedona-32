@@ -459,7 +459,6 @@ p.subscription-description {
   margin-right: 0;
 }
 
-
 .footer-contact {
   font-style: normal;
   font-weight: normal;
@@ -487,8 +486,14 @@ p.subscription-description {
   font-style: normal;
   display: flex;
   flex-direction: column;
-  height: 408px;
   margin-bottom: 44px;
+}
+
+.inner-wrap {
+  padding-top: 35px;
+  padding-bottom: 67px; /* по макету 83px, обратить внимание на .inner-header-title {line-height: 78px;} 83-10=73
+                                                                .breadcrumbs-item {height: 27px;} 73-6=67
+                                                                кнопка в стайлгайде вложена в рамку */
 }
 
 .inner-header-title {
@@ -496,7 +501,6 @@ p.subscription-description {
   font-size: 60px;
   line-height: 78px;
   margin: 0;
-  margin-top: 35px;
   margin-left: 71px;
   margin-bottom: 5px;
 }
@@ -524,31 +528,43 @@ p.subscription-description {
 
 /* Фильтры, карточки гостинииы */
 
-.filter-wrap {
-  margin-left: 71px;
-}
-
 .catalog-filter-form {
   display: flex;
   justify-content: space-between;
-  width: 815px;
+  width: 1056px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .catalog-filter-title {
   font-weight: bold;
   font-size: 20px;
   line-height: 26px;
+  box-sizing: border-box;
+  padding: 0;
 }
 
 .catalog-filter-group {
-  width: 200px;
   margin: 0;
   padding: 0;
   border-width: 0;
 }
 
+.catalog-filter-group:first-child {
+  margin-right: 67px;
+}
+
+.catalog-filter-group:nth-child(2) {
+  margin-right: 216px;
+}
+
+.catalog-filter-group:nth-child(3) {
+  width: 287px;
+}
+
 .catalog-filter-list {
   list-style-type: none;
+  margin: 0;
 }
 
 .catalog-filter-item,
@@ -560,15 +576,49 @@ p.subscription-description {
   line-height: 23px;
 }
 
+.catalog-filter-item:first-child {
+  padding-top: 30px;
+}
+
+.catalog-filter-size {
+  margin-bottom: 13px;
+}
+
+.catalog-filter-size:last-child {
+  margin-bottom: 0;
+}
+
 .button-box {
   display: flex;
   flex-direction: column;
+  margin-left: auto;
+  padding-top: 34px;
 }
 
 .button-accept {
   background-color: #83B3D3;
   color: #FFFFFF;
   border-radius: 4px;
+  width: 160px;
+  height: 48px;
+  margin-bottom: 20px;
+}
+
+.button-escape {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23px;
+  text-align: center;
+  width: 160px;
+  height: 32px;
+  color: #FFFFFF;
+  background-color: transparent;
+}
+
+.button-filter {
+  text-decoration: none;
+  border-width: 0;
 }
 
 .sorting {
@@ -619,10 +669,41 @@ p.subscription-description {
   flex-direction: column;
 }
 
+/* Карточки каталога */
+
+.hotel-card-list {
+  padding: 0;
+  margin: auto;
+  width: 1056px;
+  display: grid;
+  row-gap: 58px;
+  margin-bottom: 61px;
+}
+
 .hotel-card-item {
+  display: grid;
+  grid-template-columns: 180px auto 160px;
+  column-gap: 36px;
+}
+
+.card-link-image {
+  grid-column: 1/2;
+  margin: 0;
+}
+
+.hotel-card-link {
+  text-decoration: none;
+}
+
+.hotel-card-image {
+  display: block;
+  margin-top: 3px;
+}
+
+.card-box {
+  grid-column: 2/3;
   display: flex;
-  padding-top: 28px;
-  padding-bottom: 30px;
+  flex-direction: column;
 }
 
 .hotel-card-title {
@@ -633,54 +714,46 @@ p.subscription-description {
   margin: 0;
 }
 
-.hotel-card-list {
-  display: flex;
-  flex-direction:column;
-  flex-wrap:wrap;
-  list-style-type: none;
-  width: 1056px;
-  margin: auto;
-  padding: 0;
-  margin-bottom: 31px;
-}
-
-.hotel-card-link {
-  margin-right: 36px;
-  text-decoration: none;
-}
-
-.hotel-card-image {
-  display: block;
-  margin-top: 3px;
-}
-
-.card-box {
-  width: 487px;
-  display: flex;
-  flex-direction: column;
-}
-
 .hotel-card-wrap {
-  display: flex;
   margin: 0;
-  margin-bottom: 31px;
+  display: flex;
 }
 
 .hotel-card-type {
-  width: 159px;
+  min-width: 159px;
 }
 
 .hotel-button-box {
+  margin: 0;
   display: flex;
   flex-wrap: wrap;
+  margin-top: auto;
+  padding-top: 31px;
 }
 
 .stars-rating {
   display: flex;
   flex-direction: column;
-  margin-left: auto;
-  justify-content: space-between;
+  grid-column: 3/4;
   align-items: center;
+}
+
+.show-rating {
+  display: flex;
+  min-height: 31px;
+  align-items: center;
+}
+
+.button-rating {
+margin-top: auto;
+}
+
+.show-rating-image {
+  margin-right: 7px;
+}
+
+.show-rating-image:last-child {
+  margin-right: 0;
 }
 
 .button-size {
