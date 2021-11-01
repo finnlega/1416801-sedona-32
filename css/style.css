@@ -83,6 +83,7 @@ body {
 }
 
 .navigation-link {
+  position: relative;
   color: inherit;
   font-weight: bold;
   font-size: 20px;
@@ -91,7 +92,22 @@ body {
   text-align: center;
   display: block;
   padding: 6px 12px;
+
+
   /* margin-right: 9px; */
+}
+
+.navigation-link:hover {
+  color: #756257;
+}
+
+.navigation-link:focus {
+
+  box-sizing: border-box;
+  color: #756257;
+  border: 3px solid #83B3D3;
+
+  border-radius: 10px;
 }
 
 .navigation-item:nth-child(3n+1) {
@@ -112,6 +128,31 @@ body {
   min-height: 18px;
   padding: 10px 10px;
 }
+
+/* Добавим иконки в меню навигации */
+
+.navigation-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  fill: #000000;
+}
+
+/* .navigation-user .navigation-item:nth-child(2) .navigation-link*/
+/*
+.icon-count {
+  position: absolute;
+  background-color: #7DB550;
+  background-size: 19px 19px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+
+} */
+
+
 
 .navigation-user li:nth-of-type(3) {
   background-color: #756257;
@@ -203,14 +244,29 @@ body {
   list-style-type: none;
   align-self: center;
   display:inline-block;
-  height: 100%;
+  min-height: 100%;
 }
 
 .advantages-user {
   margin: 0;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
 }
+
+
+
+/* Почему не отображается иконка "Гамбургер" в разделе ЕДА*/
+
+/* .advantages-user li:nth-of-type(2) {
+  background-image:url("../img/food.svg");
+  background-repeat:no-repeat;
+}
+
+.advantages-user li:nth-of-type(3) {
+  background-image:url("/img/present.svg");
+  background-repeat:no-repeat;
+} */
 
 .advantages-title {
   margin: 0;
@@ -298,6 +354,24 @@ h4.advantages-title {
   color: #333333;
 }
 
+.advantages-user .advantages-item:nth-of-type(1) .advantages-title {
+  background-image: url("../img/home.svg");
+  background-repeat: no-repeat;
+  background-position: top 89px center;
+}
+
+.advantages-user .advantages-item:nth-of-type(2) .advantages-title {
+  background-image: url("../img/food.svg");
+  background-repeat: no-repeat;
+  background-position: top 89px center;
+}
+
+.advantages-user .advantages-item:nth-of-type(3) .advantages-title {
+  background-image: url("../img/present.svg");
+  background-repeat: no-repeat;
+  background-position: top 89px center;
+}
+
 /* Подписка, поиск гостиницы*/
 
 .search {
@@ -353,6 +427,7 @@ p.search-description {
   text-transform: uppercase;
   color: #FFFFFF;
   border-width: 0;
+  cursor: pointer;
 }
 
 .search-button {
@@ -470,6 +545,26 @@ p.subscription-description {
 .footer-contact-phone {
   text-decoration: none;
   color:  #000000;
+}
+
+.social-button {
+  display: block;
+  height: 40px;
+  background-color: #FFFFFF;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.footer-social-twitter {
+  background-image: url("../img/social-twitter.svg");
+}
+
+.footer-social-facebook {
+  background-image: url("../img/social-facebook.svg");
+}
+
+.footer-social-youtube {
+  background-image: url("../img/social-youtube.svg");
 }
 
 /* Стилизация каталога */
