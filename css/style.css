@@ -59,6 +59,7 @@ body {
 }
 
 /* Навигация*/
+
 .navigation {
   display: flex;
   justify-content: space-between;
@@ -92,9 +93,6 @@ body {
   text-align: center;
   display: block;
   padding: 6px 12px;
-
-
-  /* margin-right: 9px; */
 }
 
 .navigation-link:hover {
@@ -102,12 +100,15 @@ body {
 }
 
 .navigation-link:focus {
-
-  box-sizing: border-box;
   color: #756257;
-  border: 3px solid #83B3D3;
-
+  outline: 3px solid #83B3D3;
   border-radius: 10px;
+}
+
+.navigation-link:active {
+  color: #756257;
+  opacity: 0.3;
+  outline: none;
 }
 
 .navigation-item:nth-child(3n+1) {
@@ -129,6 +130,30 @@ body {
   padding: 10px 10px;
 }
 
+.condition {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.condition:hover {
+  color: #FFFFFF;
+  background: #615048;
+  border-radius: 4px;
+}
+
+.condition:focus {
+  color: #FFFFFF;
+  background: #615048;
+  border-radius: 4px;
+}
+
+.condition:active {
+  color: #FFFFFF;
+  opacity: 0.3;
+  background: #615048;
+  border-radius: 4px;
+}
+
 /* Добавим иконки в меню навигации */
 
 .navigation-icon {
@@ -141,18 +166,32 @@ body {
   fill: #000000;
 }
 
-/* .navigation-user .navigation-item:nth-child(2) .navigation-link*/
-/*
-.icon-count {
+.navigation-icon:hover,
+.navigation-icon:focus {
+  fill: #756257;
+}
+
+.navigation-count {
   position: absolute;
+  display: flex;
   background-color: #7DB550;
-  background-size: 19px 19px;
+  width: 19px;
+  height: 19px;
   border-radius: 50%;
   background-repeat: no-repeat;
-
-} */
-
-
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 13px;
+  letter-spacing: -0.1em;
+  justify-content: center;
+  align-items: center;
+  color: #FFFFFF;
+  left: 20px;
+  top: -2px;
+  z-index: 2;
+}
 
 .navigation-user li:nth-of-type(3) {
   background-color: #756257;
@@ -253,20 +292,6 @@ body {
   display: flex;
   flex-wrap: wrap;
 }
-
-
-
-/* Почему не отображается иконка "Гамбургер" в разделе ЕДА*/
-
-/* .advantages-user li:nth-of-type(2) {
-  background-image:url("../img/food.svg");
-  background-repeat:no-repeat;
-}
-
-.advantages-user li:nth-of-type(3) {
-  background-image:url("/img/present.svg");
-  background-repeat:no-repeat;
-} */
 
 .advantages-title {
   margin: 0;
@@ -440,6 +465,24 @@ p.search-description {
   margin-right: auto;
 }
 
+.search-button:hover {
+  background: #615048;
+}
+
+.search-button:focus {
+  background: #615048;
+  outline: 3px solid #83B3D3;
+}
+
+.search-button:active {
+  /* допустима ли замена  color: #FFFFFF;
+                          opacity: 0.3;
+                          на color: #b3b3b3; через конвертер цветов hex - RGBA? Почему при указании первых двух строк для псевоэлемента active opacity действует на всю кнопку а не на текст?
+  */
+  color: #b3b3b3;
+  background: #615048;
+}
+
 .set-theme {
   background-image: url("../img/subscription.jpg");
   background-repeat: no-repeat;
@@ -476,6 +519,19 @@ p.subscription-description {
   height: 60px;
 }
 
+.subscription-button:hover {
+  background: #68A2CA;
+}
+
+.subscription-button:focus {
+  background: #68A2CA;
+  border: 3px solid #756257;
+}
+
+.subscription-button:active {
+  color: rgba(255, 255, 255, 0.3)
+}
+
 .field {
   font-style: normal;
   font-size: 18px;
@@ -489,6 +545,28 @@ p.subscription-description {
   padding-left: 22px;
 }
 
+.field:hover {
+  background: #E6E6E6;
+}
+
+.field:focus {
+  outline: 3px solid #83B3D3;
+  background: #E6E6E6;
+}
+
+.field:active {
+  outline: none;
+  background: #FFFFFF;
+  border: 2px solid #000000;
+}
+
+input:invalid {
+  outline: none;
+  background: #FFFFFF;
+  border: 2px solid #FF5757;
+}
+
+
 .btn {
   font-style: normal;
   font-weight: bold;
@@ -500,6 +578,7 @@ p.subscription-description {
 }
 
 /* footer*/
+
 .page-footer {
   width: 1200px;
   margin: 0 auto;
@@ -545,9 +624,27 @@ p.subscription-description {
 .footer-contact-phone {
   text-decoration: none;
   color:  #000000;
+  padding: 15px;
+  display: inline-block;
+}
+
+.footer-contact-phone:hover {
+  color: #756257;
+}
+
+.footer-contact-phone:focus {
+  outline: 3px solid #83B3D3;
+  border-radius: 10px;
+}
+
+.footer-contact-phone:active {
+  color: #756257;
+  opacity: 0.3;
+  outline: none;
 }
 
 .social-button {
+  position: relative;
   display: block;
   height: 40px;
   background-color: #FFFFFF;
@@ -555,16 +652,66 @@ p.subscription-description {
   background-position: center;
 }
 
-.footer-social-twitter {
-  background-image: url("../img/social-twitter.svg");
+.footer-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  fill: #83B3D3;
 }
 
-.footer-social-facebook {
-  background-image: url("../img/social-facebook.svg");
+.footer-icon:hover {
+  fill: #68A2CA;
 }
 
-.footer-social-youtube {
-  background-image: url("../img/social-youtube.svg");
+.social-button:focus {
+  fill: #68A2CA;
+  box-sizing: border-box;
+  outline: 3px solid #68A2CA;
+  border-radius: 10px;
+}
+
+.social-button:active {
+  fill: #68A2CA;
+  opacity: 0.3;
+  outline: none;
+}
+
+.footer-link {
+  position: relative;
+  display: block;
+  background-color: #FFFFFF;
+  width: 115px;
+  height: 34px;
+  padding: 10px;
+}
+
+.footer-logo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  fill: #000000;
+}
+
+.footer-logo:hover {
+  fill: #756257;
+}
+
+.footer-link:focus {
+  fill: #756257;
+  outline: 3px solid #83B3D3;
+  border-radius: 10px;
+}
+
+.footer-link:active {
+  fill: #756257;
+  opacity: 0.3;
+  outline: none;
 }
 
 /* Стилизация каталога */
