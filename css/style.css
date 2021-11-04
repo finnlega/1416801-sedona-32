@@ -2,7 +2,7 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
-  src: url("/fonts/ptsans-400.woff2") format("woff2");
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
 
   font-display: swap;
 }
@@ -11,7 +11,7 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
-  src: url("/fonts/ptsans-700.woff2") format("woff2");
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
 
   font-display: swap;
 }
@@ -75,8 +75,11 @@ body {
 }
 
 .navigation-item {
+  position: relative;
   list-style-type: none;
   margin-right: 9px;
+  padding-top: 10px;
+  padding-bottom: 14px;
 }
 
 .navigation-item:nth-child(3n) {
@@ -116,8 +119,13 @@ body {
 }
 
 .navigation-user {
-  max-width: 255px;
+  max-width: 260px;
   margin-left: auto;
+}
+
+.navigation-user .navigation-item {
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
 .navigation-user .navigation-item:first-child {
@@ -130,9 +138,22 @@ body {
   padding: 10px 10px;
 }
 
+.navigation-user > .navigation-item:nth-child(1) {
+  margin-right: 1px;
+}
+
+.navigation-user >.navigation-item:nth-child(2) {
+  margin-right: 23px;
+}
+
 .condition {
   width: 100%;
   box-sizing: border-box;
+  background-color: #756257;
+  color: #FFFFFF;
+  border-radius: 4px;
+  width: 160px;
+  text-align: center;
 }
 
 .condition:hover {
@@ -148,9 +169,8 @@ body {
 }
 
 .condition:active {
-  color: #FFFFFF;
-  opacity: 0.3;
-  background: #615048;
+  color: #b3b3b3;
+  background-color: #615048;
   border-radius: 4px;
 }
 
@@ -188,17 +208,9 @@ body {
   justify-content: center;
   align-items: center;
   color: #FFFFFF;
-  left: 20px;
-  top: -2px;
+  left: 21px;
+  top: 0;
   z-index: 2;
-}
-
-.navigation-user li:nth-of-type(3) {
-  background-color: #756257;
-  color: #FFFFFF;
-  border-radius: 4px;
-  width: 160px;
-  text-align: center;
 }
 
 .navigation-user:nth-child(3) {
@@ -210,6 +222,10 @@ body {
   padding-left: 96px;
 }
 
+.logo-img {
+  position: absolute;
+  display: block;
+}
 /* Кнопки карточек каталога и ссылок навигации на первой и второй странице*/
 
 .button-small,
@@ -255,8 +271,9 @@ body {
   text-transform: uppercase;
   width: 720px;
   margin: 0;
-  padding-top: 548px;
-  margin-bottom: 23px;
+  padding-top: 547px;
+  padding-bottom: 8px;
+  margin-bottom: 24px;
 }
 
 .main-description {
@@ -308,6 +325,7 @@ h3.advantages-title {
   width: 172px;
   margin-left: auto;
   margin-right: auto;
+  padding-bottom: 4px;
 }
 
 .advantages-number {
@@ -315,6 +333,7 @@ h3.advantages-title {
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 26px;
+  padding-bottom: 4px;
 }
 
 .advantages-description {
@@ -322,20 +341,21 @@ h3.advantages-title {
 }
 
 p.advantages-description {
+  font-family: PT Sans;
   width: 220px;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 95px;
+  padding-bottom: 77px;
 }
 
 p.wide {
   width: 250px;
-  margin-bottom: 89px;
+  padding-bottom: 89px;
 }
 
 p.big {
-  margin-bottom: 116px;
+  padding-bottom: 108px;
 }
 
 h4.advantages-title {
@@ -388,13 +408,13 @@ h4.advantages-title {
 .advantages-user .advantages-item:nth-of-type(2) .advantages-title {
   background-image: url("../img/food.svg");
   background-repeat: no-repeat;
-  background-position: top 89px center;
+  background-position: top 91px center;
 }
 
 .advantages-user .advantages-item:nth-of-type(3) .advantages-title {
   background-image: url("../img/present.svg");
   background-repeat: no-repeat;
-  background-position: top 89px center;
+  background-position: top 87px center;
 }
 
 /* Подписка, поиск гостиницы*/
@@ -406,8 +426,8 @@ h4.advantages-title {
   text-align: center;
   display: flex;
   flex-direction: column;
-  padding-top: 91px;
-  padding-bottom: 91px;
+  padding-top: 90px;
+  padding-bottom: 92px;
 }
 
 .subscription {
@@ -456,6 +476,7 @@ p.search-description {
 }
 
 .search-button {
+  font-family: PT Sans;
   line-height: 36px;
   background-color: #756257;
   border-radius: 10px;
@@ -488,18 +509,20 @@ p.search-description {
   background-repeat: no-repeat;
   color: #FFFFFF;
   width: 1200px;
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 93px;
+  padding-bottom: 95px;
 }
 
 .headline-index {
-  margin-bottom: 29px;
+  padding-bottom: 14px;
+  margin-bottom: 15px;
 }
 
 
 p.subscription-description {
   margin: 0;
-  margin-bottom: 46px;
+  padding-bottom: 20px;
+  margin-bottom: 26px;
   margin-left: auto;
   margin-right: auto;
   width: 540px;
@@ -533,6 +556,7 @@ p.subscription-description {
 }
 
 .field {
+  font-family: PT Sans;
   font-style: normal;
   font-size: 18px;
   line-height: 26px;
@@ -543,6 +567,7 @@ p.subscription-description {
   margin: 0;
   padding: 0;
   padding-left: 22px;
+  box-sizing: border-box;
 }
 
 .field:hover {
@@ -566,8 +591,8 @@ input:invalid {
   border: 2px solid #FF5757;
 }
 
-
 .btn {
+  font-family: PT Sans;
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
@@ -586,13 +611,14 @@ input:invalid {
 
 .footer-wrapper {
   display: flex;
-  justify-content: space-around;
   align-items: center;
   height: 120px;
+  margin-left: 61px;
 }
 
 .footer-social {
   max-width: 136px;
+  margin-right: 51px;
 }
 
 .footer-social-list {
@@ -619,6 +645,11 @@ input:invalid {
   font-size: 40px;
   line-height: 40px;
   text-transform: uppercase;
+  padding-top: 23px;
+  padding-bottom: 27px;
+  width: 720px;
+  text-align: center;
+  margin-right: 43px;
 }
 
 .footer-contact-phone {
@@ -748,24 +779,61 @@ input:invalid {
 }
 
 .breadcrumbs {
+
   margin: 0;
   display: flex;
   padding: 0;
   list-style-type: none;
+  align-items: center;
 }
 
 .breadcrumbs-item {
+  position: relative;
   font-weight: normal;
   font-size: 16px;
   line-height: 21px;
   margin-bottom: 45px;
+
 }
 
 .breadcrumbs-item:first-child {
   margin-left: 73px;
-  margin-right: 26px;
+  margin-right: 6px;
   width: 28px;
   height: 27px;
+}
+
+.breadcrumbs-item:last-child {
+  background-image: url("../img/nav-link.svg");
+  background-repeat: no-repeat;
+  background-size: 5px 8px;
+  background-position: center right 95px;
+  padding-left: 15px;
+}
+
+.breadcrumbs-index {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  fill: #FFFFFF;
+}
+
+.breadcrumbs-link:hover {
+  color: #FFFFFF;
+  opacity: 0.6;
+}
+
+.breadcrumbs-link {
+  padding: 3px 8px;
+}
+
+.breadcrumbs-link:focus {
+  outline: 3px solid #83B3D3;
+  box-sizing: border-box;
+  border-radius: 4px;
 }
 
 /* Фильтры, карточки гостинииы */
@@ -817,6 +885,18 @@ input:invalid {
   font-size: 18px;
   line-height: 23px;
 }
+
+.select-control:hover,
+.select-control:focus {
+  outline: 2px solid #83B3D3;
+  border-radius: 4px;
+}
+
+.select-control:active {
+  outline: none;
+  opacity: 0.3;
+}
+
 
 .catalog-filter-item:first-child {
   padding-top: 30px;
@@ -884,10 +964,35 @@ input:invalid {
 }
 
 .sorting .button-sort {
+  position: relative;
   width: 48px;
   height: 48px;
   margin-right: 8px;
   border: 2px solid #E6E6E6;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 17px 16px;
+}
+
+.button-sort-type {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  fill: #000000;
+}
+
+.button-sort:hover,
+.button-sort:focus {
+  outline: 2px solid #83B3D3;
+  border-radius: 4px;
+}
+
+.button-sort:active {
+  outline: none;
+  border: 2px solid #000000;
   box-sizing: border-box;
   border-radius: 4px;
 }
@@ -931,10 +1036,35 @@ input:invalid {
 .card-link-image {
   grid-column: 1/2;
   margin: 0;
+  border-width: 0;
 }
+
+.card-link-image:hover {
+  opacity: 0.6;
+}
+
+/* при указании плесдокласса focus на дочерний элемент изображения, обводка действует на картинку, в инспекторе это видно, но когда я нажимаю tab на клавиатуре,
+то появляется еще черная рамка, какому элементу она принадлежит не могу понять, если вешать состояние focus на класс .card-link-image, то так как изображение
+занимает меньше места по высоте по макету, чем высота блока, то получается обводка срабатывает по внешнему контуру блока, куда вставлено изображение.
+Как правильно сделать?*/
+
+.card-link-image > .hotel-card-image:focus {
+  outline: 3px solid #83B3D3;
+}
+
+.card-link-image:active {
+  outline: none;
+  opacity: 0.3;
+}
+
+/* .hotel-card-link:focus > .hotel-card-title {
+
+} */
+
 
 .hotel-card-link {
   text-decoration: none;
+  border-width: 0;
 }
 
 .hotel-card-image {
@@ -1123,4 +1253,158 @@ a.pagination-link {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 94px;
+}
+
+/* Поповер */
+
+.popover {
+  position: absolute;
+  top: 62px;
+  right: -170px;
+  z-index: 1;
+  box-sizing: border-box;
+  width: 400px;
+  min-height: 232px;
+  font-family: PT Sans;
+  font-style: normal;
+  color: #333333;
+  background-color: #FFFFFF;
+  border: 1px solid #E6E6E6;
+  box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  display: none;
+}
+
+.popover-content {
+  display: flex;
+  flex-direction: column;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 25px;
+  padding-bottom: 26px;
+}
+
+.popover-card-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-rows: auto;
+  column-gap: 17px;
+  row-gap: 25px;
+}
+
+.popover-card-item {
+  display: grid;
+  grid-template-columns: 48px auto 36px;
+  column-gap: 17px;
+}
+
+.popover-card-image {
+  display: block;
+  grid-column: 1/2;
+  background-color: #FFFFFF;
+}
+
+.popover-card-box {
+  display: flex;
+  flex-direction: column;
+  grid-column: 2/3;
+}
+
+.popover-card-title {
+  margin: 0;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  align-items: center;
+  color: #000000;
+}
+
+.popover-card-type {
+  margin: 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  align-items: center;
+  color: #333333;
+}
+
+.popover-button {
+  margin: 0;
+  width: 400px;
+  height: 60px;
+  background-color: #756257;
+  border-radius: 0px 0px 20px 20px;
+  border-width: 0;
+  font-style: normal;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.popover-button:hover {
+  background-color: #615048;
+}
+
+.popover-button:focus {
+  background-color: #615048;
+  outline: 3px solid #83B3D3;
+}
+
+.popover-button:active {
+  outline: none;
+  color: #b3b3b3;
+  background: #615048;
+}
+
+.popover-basket-button {
+  position: relative;
+  background-color: #FFFFFF;
+  border-width: 0;
+  cursor: pointer;
+  padding: 10px;
+  width: 36px;
+  height: 36px;
+}
+
+.popover-basket {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  fill: #000000;
+  opacity: 0.2;
+
+}
+
+.popover-basket-button .popover-basket:hover {
+  fill: #000000;
+  opacity: 1;
+}
+.popover-basket-button:focus {
+  outline: 3px solid #83B3D3;
+  border-radius: 10px;
+  fill: #000000;
+  opacity: 1;
+}
+
+.popover-basket:active {
+  outline: none;
+  fill: #000000;
+  opacity: 0.1;
+}
+
+.popover-link:hover {
+  opacity: 0.6;
+}
+
+.popover-link:focus {
+  opacity: 0.6;
 }

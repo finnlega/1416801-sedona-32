@@ -23,7 +23,7 @@
           </li>
         </ul>
         <a class="logo">
-          <img src="img/logo.svg" alt="Логотип городка Седона" width="138" height="70">
+          <img class="logo-img" src="img/logo.svg" alt="Логотип городка Седона" width="138" height="70">
         </a>
         <ul class="navigation-list navigation-user">
           <li class="navigation-item">
@@ -49,6 +49,58 @@
                 </svg>
               <span class="visually-hidden">Избранное</span>
             </a>
+            <div class="popover popover-cart">
+              <div class="popover-content">
+                <h2 class="visually-hidden">Избраное</h2>
+                <ul class="popover-card-list">
+                  <li class="popover-card-item">
+                    <a class="popover-link" href="">
+                      <img class="popover-card-image" src="../img/hotel-2-small.png" alt="Гостиница Амара в горах" width="48" height="48">
+                    </a>
+                    <a class="popover-link" href="">
+                      <div class="popover-card-box">
+                        <p class="popover-card-title">Amara Resort & Spa</h3>
+                        <p class="popover-card-type">Гостиница</p>
+                      </div>
+                    </a>
+                    <button class="popover-basket-button" type="button">
+                      <svg class="popover-basket" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g opacity="">
+                        <path d="M15.3 2.29999H13.1H2.8H0.6C0.3 2.29999 0 2.49999 0 2.79999C0 3.09999 0.3 3.39999 0.6 3.39999H2.3V15.4C2.3 15.7 2.6 16 2.9 16H13.1C13.4 16 13.7 15.7 13.7 15.4V3.39999H15.4C15.7 3.39999 16 3.09999 16 2.79999C16 2.49999 15.6 2.29999 15.3 2.29999ZM12.5 14.8H3.4V3.39999H12.5V14.8Z" fill=""/>
+                        <path d="M6.20001 1.2H9.60001C9.90001 1.2 10.2 0.9 10.2 0.6C10.2 0.3 10 0 9.70001 0H6.20001C5.90001 0 5.70001 0.3 5.70001 0.6C5.70001 0.9 5.90001 1.2 6.20001 1.2Z" fill=""/>
+                        <path d="M6.19998 12C6.49998 12 6.79998 11.7 6.79998 11.4V5.69998C6.79998 5.39998 6.49998 5.09998 6.19998 5.09998C5.89998 5.09998 5.59998 5.39998 5.59998 5.69998V11.4C5.69998 11.7 5.89998 12 6.19998 12Z" fill=""/>
+                        <path d="M9.69998 12C9.99998 12 10.3 11.7 10.3 11.4V5.69998C10.3 5.39998 9.99998 5.09998 9.69998 5.09998C9.39998 5.09998 9.09998 5.49998 9.09998 5.69998V11.4C9.09998 11.7 9.29998 12 9.69998 12Z" fill=""/>
+                        </g>
+                      </svg>
+                      <span class="visually-hidden">Удалить из корзина</span>
+                    </button>
+                  </li>
+                  <li class="popover-card-item">
+                    <a class="popover-link" href="">
+                      <img class="popover-card-image" src="../img/hotel-3-small.png" alt="Мотель Дезерт в каньоне" width="48" height="48">
+                    </a>
+                    <a class="popover-link" href="">
+                  <div class="popover-card-box">
+                    <p class="popover-card-title">Desert Quail Inn</h3>
+                    <p class="popover-card-type">Мотель</p>
+                  </div>
+                  </a>
+                  <button class="popover-basket-button" type="button">
+                    <svg class="popover-basket" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g opacity="">
+                      <path d="M15.3 2.29999H13.1H2.8H0.6C0.3 2.29999 0 2.49999 0 2.79999C0 3.09999 0.3 3.39999 0.6 3.39999H2.3V15.4C2.3 15.7 2.6 16 2.9 16H13.1C13.4 16 13.7 15.7 13.7 15.4V3.39999H15.4C15.7 3.39999 16 3.09999 16 2.79999C16 2.49999 15.6 2.29999 15.3 2.29999ZM12.5 14.8H3.4V3.39999H12.5V14.8Z" fill=""/>
+                      <path d="M6.20001 1.2H9.60001C9.90001 1.2 10.2 0.9 10.2 0.6C10.2 0.3 10 0 9.70001 0H6.20001C5.90001 0 5.70001 0.3 5.70001 0.6C5.70001 0.9 5.90001 1.2 6.20001 1.2Z" fill=""/>
+                      <path d="M6.19998 12C6.49998 12 6.79998 11.7 6.79998 11.4V5.69998C6.79998 5.39998 6.49998 5.09998 6.19998 5.09998C5.89998 5.09998 5.59998 5.39998 5.59998 5.69998V11.4C5.69998 11.7 5.89998 12 6.19998 12Z" fill=""/>
+                      <path d="M9.69998 12C9.99998 12 10.3 11.7 10.3 11.4V5.69998C10.3 5.39998 9.99998 5.09998 9.69998 5.09998C9.39998 5.09998 9.09998 5.49998 9.09998 5.69998V11.4C9.09998 11.7 9.29998 12 9.69998 12Z" fill=""/>
+                      </g>
+                    </svg>
+                    <span class="visually-hidden">Удалить из корзина</span>
+                  </button>
+                </li>
+                </ul>
+              </div>
+              <button class="popover-button" type="button">Все избранные</button>
+           </div>
           </li>
           <li class="navigation-item">
             <a class="navigation-link button-small condition" href="catalog.html">Хочу сюда!</a>
@@ -60,7 +112,7 @@
       <div class="main-wrap">
         <h1 class="main-title">Седона — небольшой городок в Аризоне,
           заслуживающий большего!</h1>
-        <p class="main-description">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+        <p class="main-description">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
       </div>
       <section class="advantages">
         <h2 class="visually-hidden">Преимущества</h2>
@@ -79,21 +131,20 @@
               <li class="advantages-item">
                 <div class="grey-theme color-container">
                   <h4 class="advantages-title">Жильё</h4>
-                  <p class="advantages-description wide">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+                  <p class="advantages-description wide">Рекомендуем пожить в&nbsp;настоящем мотеле, всё&nbsp;как&nbsp;в&nbsp;кино!</p>
                 </div>
               </li>
               <li class="advantages-item">
                 <div class="white-theme color-container">
                   <h4 class="advantages-title">Еда</h4>
-                  <p class="advantages-description wide">Всегда заказывайте топовый фирменный бургер, вы не
-                    разочаруетесь!
+                  <p class="advantages-description wide">Всегда заказывайте топовый&nbsp;фирменный&nbsp;бургер, вы&nbsp;не&nbsp;разочаруетесь!
                   </p>
                 </div>
               </li>
               <li class="advantages-item">
                 <div class="grey-theme color-container">
                   <h4 class="advantages-title">Сувениры</h4>
-                  <p class="advantages-description wide">Не только китайского, но и настоящего местного производства!
+                  <p class="advantages-description wide">Не только китайского, но&nbsp;и&nbsp;настоящего&nbsp;местного производства!
                   </p>
                 </div>
               </li>
@@ -134,8 +185,7 @@
       </section>
       <section class="search">
         <h2 class="search-title ">Заинтересовались?</h2>
-        <p class="search-description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц
-          в Седоне</p>
+        <p class="search-description">Укажите предполагаемые даты поездки, и&nbsp;мы&nbsp;покажем&nbsp;вам&nbsp;лучшие&nbsp;предложения&nbsp;гостиниц&nbsp;в&nbsp;Седоне</p>
         <button class="search-button button">Поиск гостиницы в Седоне</button>
       </section>
       <aside class="subscription set-theme">
