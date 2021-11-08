@@ -48,6 +48,7 @@ body {
 
 .page-wrapper {
   box-shadow: 0px 0px 15px #cccccc;
+  margin: auto;
 }
 
 .page-header,
@@ -173,6 +174,15 @@ body {
   color: #b3b3b3;
   background-color: #615048;
   border-radius: 4px;
+}
+
+.navigation-link-current::before {
+  position: absolute;
+  right: 12px;
+  bottom: -15px;
+  left: 12px;
+  border: 2px solid #756257;
+  content: "";
 }
 
 /* Добавим иконки в меню навигации */
@@ -536,6 +546,7 @@ p.subscription-description {
 }
 
 .subscription-button {
+  font-family: PT Sans;
   line-height: 26px;
   background: #83B3D3;
   width: 200px;
@@ -760,12 +771,12 @@ input:invalid {
   font-style: normal;
   display: flex;
   flex-direction: column;
-  margin-bottom: 44px;
+  margin-bottom: 45px;
 }
 
 .inner-wrap {
   padding-top: 35px;
-  padding-bottom: 67px; /* по макету 83px, обратить внимание на .inner-header-title {line-height: 78px;} 83-10=73
+  padding-bottom: 83px; /* по макету 83px, обратить внимание на .inner-header-title {line-height: 78px;} 83-10=73
                                                                 .breadcrumbs-item {height: 27px;} 73-6=67
                                                                 кнопка в стайлгайде вложена в рамку */
 }
@@ -776,7 +787,8 @@ input:invalid {
   line-height: 78px;
   margin: 0;
   margin-left: 71px;
-  margin-bottom: 5px;
+  margin-bottom: 2px;
+  height: 68px;
 }
 
 .breadcrumbs {
@@ -793,7 +805,7 @@ input:invalid {
   font-weight: normal;
   font-size: 16px;
   line-height: 21px;
-  margin-bottom: 45px;
+  margin-bottom: 40px;
 
 }
 
@@ -866,7 +878,7 @@ input:invalid {
 }
 
 .catalog-filter-group:nth-child(2) {
-  margin-right: 216px;
+  margin-right: 167px;
 }
 
 .catalog-filter-group:nth-child(3) {
@@ -882,9 +894,15 @@ input:invalid {
 .select-control,
 .hotel-card-type,
 .hotel-card-price {
+  font-family: PT Sans;
   font-weight: normal;
   font-size: 18px;
   line-height: 23px;
+}
+
+.select-control {
+  padding-left: 16px;
+  /* appearance: none; */
 }
 
 .select-control:hover,
@@ -897,7 +915,6 @@ input:invalid {
   outline: none;
   opacity: 0.3;
 }
-
 
 .catalog-filter-item:first-child {
   padding-top: 30px;
@@ -946,7 +963,7 @@ input:invalid {
 
 .sorting {
   display: flex;
-  margin-bottom: 42px;
+  margin-bottom: 70px;
   align-items: center;
   width: 1056px;
   margin-left: auto;
@@ -954,13 +971,17 @@ input:invalid {
 }
 
 .sorting-search {
+  /* font-family: PT Sans; */
   font-weight: bold;
   font-size: 30px;
   line-height: 39px;
   margin-right: 192px;
+  text-transform: uppercase;
+  padding-top: 6px;
 }
 
 .sorting-type {
+  display: flex;
   margin-right: auto;
 }
 
@@ -1179,6 +1200,7 @@ margin-top: auto;
 }
 
 .wide-button {
+  font-family: PT Sans;
   width: 625px;
   height: 55px;
   margin-left: 0;
@@ -1246,6 +1268,7 @@ a.pagination-link {
 
 .headline-catalog {
   margin-bottom: 15px;
+  padding-bottom: 14px;
 }
 
 .catalog-theme {
@@ -1253,7 +1276,7 @@ a.pagination-link {
   justify-content: space-between;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 94px;
+  margin-bottom: 137px;
 }
 
 /* Поповер */
