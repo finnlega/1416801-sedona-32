@@ -64,7 +64,6 @@ body {
 .navigation {
   display: flex;
   justify-content: space-between;
-
 }
 
 .navigation-list {
@@ -171,7 +170,7 @@ body {
 }
 
 .condition:active {
-  color: #b3b3b3;
+  color: rgba(255, 255, 255, 0.3);
   background-color: #615048;
   border-radius: 4px;
 }
@@ -507,11 +506,7 @@ p.search-description {
 }
 
 .search-button:active {
-  /* допустима ли замена  color: #FFFFFF;
-                          opacity: 0.3;
-                          на color: #b3b3b3; через конвертер цветов hex - RGBA? Почему при указании первых двух строк для псевоэлемента active opacity действует на всю кнопку а не на текст?
-  */
-  color: #b3b3b3;
+  color: rgba(255, 255, 255, 0.3);
   background: #615048;
 }
 
@@ -528,7 +523,6 @@ p.search-description {
   padding-bottom: 14px;
   margin-bottom: 15px;
 }
-
 
 p.subscription-description {
   margin: 0;
@@ -776,9 +770,7 @@ input:invalid {
 
 .inner-wrap {
   padding-top: 35px;
-  padding-bottom: 83px; /* по макету 83px, обратить внимание на .inner-header-title {line-height: 78px;} 83-10=73
-                                                                .breadcrumbs-item {height: 27px;} 73-6=67
-                                                                кнопка в стайлгайде вложена в рамку */
+  padding-bottom: 83px;
 }
 
 .inner-header-title {
@@ -792,12 +784,25 @@ input:invalid {
 }
 
 .breadcrumbs {
-
+  position: relative;
   margin: 0;
   display: flex;
   padding: 0;
   list-style-type: none;
   align-items: center;
+}
+
+.breadcrumbs::before {
+  position: absolute;
+  background-image: url("../img/nav-link.svg");
+  background-repeat: no-repeat;
+  background-size: 5px 8px;
+  width: 5px;
+  height: 8px;
+  display: inline-block;
+  content: "";
+  left: 97px;
+  top: 10px;
 }
 
 .breadcrumbs-item {
@@ -806,22 +811,17 @@ input:invalid {
   font-size: 16px;
   line-height: 21px;
   margin-bottom: 40px;
-
 }
 
 .breadcrumbs-item:first-child {
-  margin-left: 73px;
-  margin-right: 6px;
+  margin-left: 65px;
+  margin-right: 10px;
   width: 28px;
   height: 27px;
 }
 
 .breadcrumbs-item:last-child {
-  background-image: url("../img/nav-link.svg");
-  background-repeat: no-repeat;
-  background-size: 5px 8px;
-  background-position: center right 95px;
-  padding-left: 15px;
+  padding: 3px 8px;
 }
 
 .breadcrumbs-index {
@@ -830,23 +830,26 @@ input:invalid {
   right: 0;
   bottom: 0;
   left: 0;
-  margin: auto;
+  margin: auto 0;
   fill: #FFFFFF;
+  padding: 6px 8px 9px 8px;
 }
 
-.breadcrumbs-link:hover {
+
+.breadcrumbs-item .breadcrumbs-link:hover {
   color: #FFFFFF;
   opacity: 0.6;
 }
 
-.breadcrumbs-link {
-  padding: 3px 8px;
-}
-
-.breadcrumbs-link:focus {
+.breadcrumbs-item .breadcrumbs-link:focus {
   outline: 3px solid #83B3D3;
   box-sizing: border-box;
   border-radius: 4px;
+}
+
+.breadcrumbs-item .breadcrumbs-link:active {
+  color: #FFFFFF;
+  opacity: 0.3;
 }
 
 /* Фильтры, карточки гостинииы */
@@ -901,7 +904,7 @@ input:invalid {
 }
 
 .select-control {
-  padding-left: 16px;
+  padding-left: 13px;
   /* appearance: none; */
 }
 
@@ -932,7 +935,7 @@ input:invalid {
   display: flex;
   flex-direction: column;
   margin-left: auto;
-  padding-top: 34px;
+  padding-top: 60px;
 }
 
 .button-accept {
@@ -944,6 +947,22 @@ input:invalid {
   margin-bottom: 20px;
 }
 
+.button-accept:hover {
+  background: #68A2CA;
+
+}
+
+.button-accept:focus {
+  background: #68A2CA;
+  outline: 3px solid #FFFFFF;
+}
+
+.button-accept:active {
+  background: #68A2CA;
+  outline: none;
+  color: rgba(255, 255, 255, 0.3)
+}
+
 .button-escape {
   font-style: normal;
   font-weight: normal;
@@ -951,10 +970,27 @@ input:invalid {
   line-height: 23px;
   text-align: center;
   width: 160px;
-  height: 32px;
   color: #FFFFFF;
   background-color: transparent;
 }
+
+.button-escape:hover {
+  color: #FFFFFF;
+  opacity: 0.6
+}
+
+.button-escape:focus {
+  color: #FFFFFF;
+  outline: 3px solid #83B3D3;
+  border-radius: 4px;
+}
+
+.button-escape:active {
+  color: #FFFFFF;
+  opacity: 0.3;
+  outline: none;
+}
+
 
 .button-filter {
   text-decoration: none;
@@ -971,7 +1007,6 @@ input:invalid {
 }
 
 .sorting-search {
-  /* font-family: PT Sans; */
   font-weight: bold;
   font-size: 30px;
   line-height: 39px;
@@ -1041,6 +1076,7 @@ input:invalid {
 /* Карточки каталога */
 
 .hotel-card-list {
+  position: relative;
   padding: 0;
   margin: auto;
   width: 1056px;
@@ -1050,9 +1086,20 @@ input:invalid {
 }
 
 .hotel-card-item {
+  position: relative;
   display: grid;
   grid-template-columns: 180px auto 160px;
   column-gap: 36px;
+}
+
+.hotel-card-item::before {
+  position: absolute;
+  display: inline-block;
+  content: "";
+  border: 1px solid #E6E6E6;
+  transform: rotate(180deg);
+  top: -28px;
+  width: 1056px;
 }
 
 .card-link-image {
@@ -1065,12 +1112,7 @@ input:invalid {
   opacity: 0.6;
 }
 
-/* при указании плесдокласса focus на дочерний элемент изображения, обводка действует на картинку, в инспекторе это видно, но когда я нажимаю tab на клавиатуре,
-то появляется еще черная рамка, какому элементу она принадлежит не могу понять, если вешать состояние focus на класс .card-link-image, то так как изображение
-занимает меньше места по высоте по макету, чем высота блока, то получается обводка срабатывает по внешнему контуру блока, куда вставлено изображение.
-Как правильно сделать?*/
-
-.card-link-image > .hotel-card-image:focus {
+.card-link-image:focus {
   outline: 3px solid #83B3D3;
 }
 
@@ -1079,10 +1121,20 @@ input:invalid {
   opacity: 0.3;
 }
 
-/* .hotel-card-link:focus > .hotel-card-title {
+.hotel-card-link:hover > .hotel-card-title {
+  color: #756257;
+}
 
-} */
+.hotel-card-link:focus > .hotel-card-title {
+  color: #756257;
+  outline: 3px solid #83B3D3;
+  border-radius: 10px;
+}
 
+.hotel-card-link:active > .hotel-card-title {
+  color: rgba(117, 98, 87, 0.3);
+  outline: none;
+}
 
 .hotel-card-link {
   text-decoration: none;
@@ -1163,14 +1215,59 @@ margin-top: auto;
   margin-right: 8px;
 }
 
+.button-description:hover {
+  background: #615048;
+}
+
+.button-description:focus {
+  background: #615048;
+  outline: 3px solid #83B3D3;
+}
+
+.button-description:active {
+  background: #615048;
+  outline: none;
+  color: rgba(255, 255, 255, 0.3);
+}
+
 .button-favorites {
   background-color: #83B3D3;
   width: 160px;
 }
 
+.button-favorites:hover {
+  outline: 1px solid #756257;
+  background: #68A2CA;
+}
+
+.button-favorites:focus {
+  outline: 3px solid #756257;
+}
+
+.button-favorites:active {
+  background: #68A2CA;
+  outline: 1px solid #756257;
+  color: rgba(255, 255, 255, 0.3);
+}
+
 .button-favorites-add {
   background-color: #7DB54F;
   width: 160px;
+}
+
+.button-favorites-add:hover {
+  background: #6C9E42;
+}
+
+.button-favorites-add:focus {
+  background: #6C9E42;
+  outline: 3px solid #756257;
+}
+
+.button-favorites-add:active {
+  background: #6C9E42;
+  outline: none;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .hotel-card-button:not(:last-child) {
@@ -1188,6 +1285,8 @@ margin-top: auto;
 
 .button-pagination,
 .pagination-link  {
+  font-family: PT Sans;
+  font-style: normal;
   font-weight: bold;
   font-size: 20px;
   line-height: 26px;
@@ -1200,6 +1299,7 @@ margin-top: auto;
 }
 
 .wide-button {
+  position: relative;
   font-family: PT Sans;
   width: 625px;
   height: 55px;
@@ -1207,6 +1307,43 @@ margin-top: auto;
   margin-right: 0;
   box-sizing: border-box;
   align-self: center;
+}
+
+.wide-button::before {
+  position: absolute;
+  display: inline-block;
+  content: "";
+  border: 1px solid #E6E6E6;
+  transform: rotate(180deg);
+  bottom: -32px;
+  left: -214px;
+  width: 1056px;
+}
+
+.wide-button::after {
+  position: absolute;
+  display: inline-block;
+  content: "";
+  border: 1px solid #E6E6E6;
+  transform: rotate(180deg);
+  top: -30px;
+  left: -214px;
+  width: 1056px;
+}
+
+.wide-button:hover {
+  background: #68A2CA;
+}
+
+.wide-button:focus {
+  background: #68A2CA;
+  outline: 3px solid #756257;
+}
+
+.wide-button:active {
+  background: #68A2CA;
+  outline: none;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .pagination-item {
@@ -1220,6 +1357,21 @@ margin-top: auto;
 a.pagination-link {
   display: block;
   padding: 14px 20px 15px;
+}
+
+a.pagination-link:hover {
+  background: #68A2CA;
+}
+
+a.pagination-link:focus {
+  background: #68A2CA;
+  outline: 3px solid #756257;
+}
+
+a.pagination-link:active {
+  background: #68A2CA;
+  outline: none;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .pagination-box {
@@ -1250,6 +1402,7 @@ a.pagination-link {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 3px;
 }
 
 .pagination-select {
@@ -1263,7 +1416,7 @@ a.pagination-link {
   font-size: 18px;
   line-height: 23px;
   color: #333333;
-  padding-left: 17px;
+  padding-left: 13px;
 }
 
 .headline-catalog {
@@ -1405,7 +1558,6 @@ a.pagination-link {
   margin: auto;
   fill: #000000;
   opacity: 0.2;
-
 }
 
 .popover-basket-button .popover-basket:hover {
