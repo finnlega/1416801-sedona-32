@@ -57,17 +57,15 @@
             </a>
             <div class="popover popover-cart">
               <div class="popover-content">
-                <h2 class="visually-hidden">Избраное</h2>
+                <h2 class="visually-hidden">Избранное</h2>
                 <ul class="popover-card-list">
                   <li class="popover-card-item">
-                    <a class="popover-link" href="">
+                    <a class="popover-link" href="" tabindex="0">
                       <img class="popover-card-image" src="../img/hotel-2-small.png" alt="Гостиница Амара в горах"
                         width="48" height="48">
-                    </a>
-                    <a class="popover-link" href="">
                       <div class="popover-card-box">
-                        <p class="popover-card-title">Amara Resort & Spa</h3>
-                          <p class="popover-card-type">Гостиница</p>
+                        <p class="popover-card-title">Desert Quail Inn</p>
+                        <p class="popover-card-type">Мотель</p>
                       </div>
                     </a>
                     <button class="popover-basket-button" type="button">
@@ -92,14 +90,12 @@
                     </button>
                   </li>
                   <li class="popover-card-item">
-                    <a class="popover-link" href="">
+                    <a class="popover-link" href="" tabindex="0">
                       <img class="popover-card-image" src="../img/hotel-3-small.png" alt="Мотель Дезерт в каньоне"
                         width="48" height="48">
-                    </a>
-                    <a class="popover-link" href="">
                       <div class="popover-card-box">
-                        <p class="popover-card-title">Desert Quail Inn</h3>
-                          <p class="popover-card-type">Мотель</p>
+                        <p class="popover-card-title">Villas at Poco Diablo</p>
+                        <p class="popover-card-type">Апартаменты</p>
                       </div>
                     </a>
                     <button class="popover-basket-button" type="button">
@@ -328,6 +324,60 @@
         </a>
       </div>
     </footer>
+  </div>
+  <div class="modal-container">
+    <div class="modal modal-search">
+      <button class="modal-close-button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
+      <section class="modal-content">
+        <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+        <form class="modal-search-form" action="https://echo.htmlacademy.ru/" method="get">
+          <p class="modal-field-group">
+            <label class="input-title calendar" for="arrival">Дата заезда:</label>
+            <input class="modal-form-field arrival-date" type="text" id="arrival" name="arrival"
+              placeholder="27 апреля 2020">
+            <span class="modal-info error">Мы не можем отправить вас в прошлое.</span>
+          </p>
+          <p class="modal-field-group">
+            <label class="input-title calendar" for="departure">Дата выезда:</label>
+            <input class="modal-form-field date-of-departure" type="text" id="departure" name="departure"
+              placeholder="1 сентября 2021">
+            <span class="modal-info success">На эти даты есть свободные номера. Пока есть.</span>
+          </p>
+          <div class="modal-field-box">
+            <p class="modal-field-group">
+              <label class="input-title" for="adult">Взрослые:</label>
+              <button class="btn-decrease adult-minus" type="button">
+                <span class="visually-hidden">Уменьшить колличество</span>
+              </button>
+              <input class="modal-form-field input-adult" type="text" id="adult" name="adult" placeholder="2">
+              <button class="btn-increase adult-plus" type="button">
+                <span class="visually-hidden">Увеличить колличество</span>
+              </button>
+            </p>
+            <p class="modal-field-group shift">
+              <label class="input-title small-size" for="children">Дети:</label>
+              <button class="info" type="button">i
+                <span class="visually-hidden">Посмотреть дополнительную информацию</span>
+              </button>
+              <button class="btn-decrease children-minus" type="button">
+                <span class="visually-hidden">Уменьшить колличество</span>
+              </button>
+              <input class="modal-form-field input-children" type="text" id="children" name="children" placeholder="1">
+              <button class="btn-increase children-plus" type="button">
+                <span class="visually-hidden">Увеличить колличество</span>
+              </button>
+              <div class="popover-info">
+                <p class="popover-tooltip">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18
+                  лет. Дети до 6 лет размещаются бесплатно.</p>
+              </div>
+            </p>
+          </div>
+          <button class="button modal-search-submit" type="submit">Найти</button>
+        </form>
+      </section>
+    </div>
   </div>
 </body>
 
