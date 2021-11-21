@@ -220,7 +220,7 @@ img {
   height: 19px;
   border-radius: 50%;
   background-repeat: no-repeat;
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 10px;
@@ -253,7 +253,7 @@ img {
 
 .button-small,
 .hotel-card-button {
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
@@ -364,7 +364,7 @@ h3.advantages-title {
 }
 
 p.advantages-description {
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -516,7 +516,7 @@ p.search-description {
 }
 
 .search-button {
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   line-height: 36px;
   background-color: #756257;
   border-radius: 10px;
@@ -575,7 +575,7 @@ p.subscription-description {
 }
 
 .subscription-button {
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   line-height: 26px;
   background: #83B3D3;
   width: 200px;
@@ -601,7 +601,7 @@ p.subscription-description {
 }
 
 .field {
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-size: 18px;
   line-height: 26px;
@@ -642,7 +642,7 @@ p.subscription-description {
 }
 
 .btn {
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
@@ -1174,7 +1174,7 @@ p.subscription-description {
 .select-control,
 .hotel-card-type,
 .hotel-card-price {
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-weight: normal;
   font-size: 18px;
   line-height: 23px;
@@ -1624,7 +1624,7 @@ margin-top: auto;
 .pagination-link  {
   padding: 8px 8px;
   box-sizing: border-box;
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
@@ -1639,7 +1639,7 @@ margin-top: auto;
 
 .wide-button {
   position: relative;
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   width: 625px;
   min-height: 55px;
   margin-left: 0;
@@ -1820,7 +1820,7 @@ a.pagination-link:active {
   border-top: 1px solid #E6E6E6;
   width: 400px;
   min-height: 160px;
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-style: normal;
   color: #333333;
   background-color: #FFFFFF;
@@ -2124,7 +2124,7 @@ a.pagination-link:active {
 
 .input-title {
   width: 155px;
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
@@ -2139,7 +2139,7 @@ a.pagination-link:active {
 
 .modal-form-field {
   height: 50px;
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
@@ -2211,7 +2211,7 @@ outline: none;
 }
 
 .modal-search-submit {
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   line-height: 40px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -2368,7 +2368,7 @@ outline: none;
 }
 
 .popover-tooltip {
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
