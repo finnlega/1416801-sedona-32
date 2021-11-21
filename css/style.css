@@ -114,6 +114,10 @@ img {
   border-radius: 10px;
 }
 
+.navigation-link:focus-within ~ .popover-open {
+  display: block;
+}
+
 .navigation-link:active {
   color: #756257;
   opacity: 0.3;
@@ -291,7 +295,6 @@ img {
   width: 720px;
   margin: 0;
   padding-top: 547px;
-  /* padding-bottom: 8px; */
   margin-bottom: 32px;
 }
 
@@ -341,13 +344,10 @@ img {
 
 h3.advantages-title {
   padding-top: 98px;
-  /* padding-left: 100px;
-  padding-right: 100px; */
   margin-bottom: 29px;
   width: 172px;
   margin-left: auto;
   margin-right: auto;
-  /* padding-bottom: 4px;         убрал */
 }
 
 .advantages-number {
@@ -355,10 +355,8 @@ h3.advantages-title {
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 30px;
-  /* padding-bottom: 4px;          убрал*/
   padding-left: 75px;
   padding-right: 75px;
-
 }
 
 .advantages-description {
@@ -367,13 +365,11 @@ h3.advantages-title {
 
 p.advantages-description {
   font-family: PT Sans;
-  /* width: 220px; */
   display: block;
   margin-left: auto;
   margin-right: auto;
   padding-left: 75px;
   padding-right: 75px;
-  /* padding-bottom: 77px;           убрать */
 }
 
 p.row-1 {
@@ -384,14 +380,11 @@ p.row-1 {
 
 p.row-2 {
   width: 250px;
-  /* padding-bottom: 89px;           убрать    */
   margin-bottom: 89px;
 }
 
 p.row-3 {
-  /* padding-bottom: 108px;           убрать   */
   margin-bottom: 108px;
-
 }
 
 h3.internal-list {
@@ -473,7 +466,6 @@ h3.external-list {
   display: flex;
   flex-direction: column;
   padding-top: 90px;
-  /* padding-bottom: 92px;          убрал*/
 }
 
 .subscription {
@@ -532,7 +524,7 @@ p.search-description {
   min-height: 60px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 92px;      /* добавил */
+  margin-bottom: 92px;
   padding: 8px 8px;
 }
 
@@ -565,22 +557,16 @@ p.search-description {
 }
 
 .headline-index {
-  /* padding-bottom: 14px;      убрал */
-  margin-bottom: 29px;             /*добавил */
+  margin-bottom: 29px;
 }
 
 p.subscription-description {
   margin: 0;
-  /* padding-bottom: 20px;              убрать */
-  margin-bottom: 46px;        /* добавил */
+  margin-bottom: 46px;
   margin-left: auto;
   margin-right: auto;
   width: 540px;
 }
-
-/* .subscription-form {
-  margin-bottom: 95px;
-}                                        убрал */
 
 .subscription-email {
   margin: 0;
@@ -849,57 +835,48 @@ p.subscription-description {
   list-style-type: none;
   align-items: center;
   margin-bottom: 40px;
-}
+  padding-left: 65px;
 
-/* .breadcrumbs::before {
-  position: absolute;
-  background-image: url("../img/nav-link.svg");
-  background-repeat: no-repeat;
-  background-size: 5px 8px;
-  width: 5px;
-  height: 8px;
-  display: inline-block;
-  content: "";
-  left: 97px;
-  top: 10px;
-} */
+}
 
 .breadcrumbs-item {
   position: relative;
   font-weight: normal;
   font-size: 16px;
   line-height: 21px;
-
-  /* margin-bottom: 40px; */
+  margin-right: 10px;
 }
 
-.breadcrumbs-item::after {
+.arrow::after {
   position: absolute;
   background-image: url("../img/nav-link.svg");
   background-repeat: no-repeat;
   background-size: 5px 8px;
   width: 5px;
   height: 8px;
-  display: inline-block;
+  display: block;
   content: "";
-  left: 30px;
+  left: -5px;
   top: 10px;
 }
 
+.arrow:first-child::after {
+  content: none;
+}
 
-.breadcrumbs-item:first-child {
-  margin-left: 65px;
+.picture-block {
   margin-right: 10px;
   width: 28px;
   min-height: 27px;
 }
 
-.breadcrumbs-item:last-child {
+.text-block {
   padding: 3px 8px;
+  margin-right: 10px;
 }
 
-.breadcrumbs-item:last-child::after {
-  content: none;
+.text-block:last-child {
+  margin-right: 0;
 }
 
 .breadcrumbs-index {
@@ -917,7 +894,6 @@ p.subscription-description {
   color: #FFFFFF;
   opacity: 0.6;
 }
-
 
 .breadcrumbs-item:focus-within {
   outline: 3px solid #83B3D3;
@@ -956,10 +932,6 @@ p.subscription-description {
   border-width: 0;
 
 }
-
-/* .size-group {
-  min-width: 150px;
-} */
 
 .catalog-filter-group:first-child {
   margin-right: 67px;
@@ -1030,7 +1002,6 @@ p.subscription-description {
   outline: 3px solid #83B3D3;
 }
 
-
 .control-input:disabled + .circle {
   outline: none;
   background: rgba(255, 255, 255, 0.3);
@@ -1050,7 +1021,6 @@ p.subscription-description {
 
 .control-input[type="radio"]:checked + .control-mark::before,
 .control-input[type="radio"]:checked + .control-mark::after {
-
   position: absolute;
   top: 5px;
   left: 5px;
@@ -1059,7 +1029,6 @@ p.subscription-description {
   content: "";
   border-radius: 50%;
   background-color: #3F5E72;
-
 }
 
 /* Шкала стоимости */
@@ -1220,13 +1189,6 @@ p.subscription-description {
   display: inline-block;
   background-position: center left 250px;
 }
-/*
-.select-control:hover {
-  outline: none;
-  border-radius: 4px;
-  box-shadow: inset 0 0 0 2px #83B3D3;
-  border: none;
-} */
 
 .select-control:hover,
 .select-control:focus {
@@ -1281,7 +1243,6 @@ p.subscription-description {
 
 .button-accept:hover {
   background: #68A2CA;
-
 }
 
 .button-accept:focus {
@@ -1324,7 +1285,6 @@ p.subscription-description {
   outline: none;
 }
 
-
 .button-filter {
   text-decoration: none;
   border-width: 0;
@@ -1346,27 +1306,18 @@ p.subscription-description {
   font-weight: bold;
   font-size: 30px;
   line-height: 39px;
-  /* margin-right: 192px;  уюрать */
   text-transform: uppercase;
-
 }
 
 .sorting-type {
   position: relative;
   display: flex;
   margin-right: auto;
-  padding-bottom: 7px; /*8 */
+  padding-bottom: 7px;
   justify-content: space-between;
   width: 816px;
   align-items: center;
-
 }
-
-/* .box-button-sort {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-} */
 
 .sorting .button-sort {
   position: relative;
@@ -1392,8 +1343,6 @@ p.subscription-description {
 
 .button-sort:hover,
 .button-sort:focus {
-  /* outline: 2px solid #83B3D3;
-  border-radius: 4px; */
   outline: none;
   border-radius: 4px;
   box-shadow: inset 0 0 0 2px #83B3D3;
@@ -1751,7 +1700,6 @@ a.pagination-link {
   justify-content: center;
   align-items: center;
   height: 100%;
-  overflow: hidden;
 }
 
 a.pagination-link:hover {
@@ -1775,7 +1723,6 @@ a.pagination-link:active {
   align-items: center;
   width: 1056px;
   margin: 0 auto;
-  /* margin-bottom: 80px;          убрал */
 }
 
 .pagination-list {
@@ -1828,20 +1775,6 @@ a.pagination-link:active {
   background-position: center left 125px;
 }
 
-/* .select-control:hover,
-.select-control:focus {
-  outline: none;
-  border-radius: 4px;
-  box-shadow: inset 0 0 0 2px #83B3D3;
-  border: none;
-}
-
-.select-control:active {
-  outline: none;
-  opacity: 0.3;
-} */
-
-
 .pagination-select:focus,
 .pagination-select:hover {
   outline: none;
@@ -1866,7 +1799,6 @@ a.pagination-link:active {
 
 .headline-catalog {
   margin-bottom: 29px;
-  /*padding-bottom: 14px;      убрал */
 }
 
 .catalog-theme {
@@ -1874,7 +1806,6 @@ a.pagination-link:active {
   justify-content: space-between;
   margin-left: auto;
   margin-right: auto;
-  /* padding-bottom: 42px; 137        убрал */
   margin-bottom: 95px;
 }
 
@@ -1911,6 +1842,23 @@ a.pagination-link:active {
   flex-direction: column;
   min-height: inherit;
 }
+
+.popover-close-button {
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  background-color: transparent;
+  border: none;
+  top: -50px;
+  left: 178.5px;
+}
+
+.popover-close-button:focus {
+    color: #756257;
+    outline: 3px solid #83B3D3;
+    border-radius: 10px;
+  }
+
 
 .popover-content {
   position: relative;
@@ -2101,7 +2049,6 @@ a.pagination-link:active {
   border-radius: 30px;
   width: 715px;
   box-sizing: border-box;
-
 }
 
 .modal-close-button {
@@ -2257,7 +2204,6 @@ outline: none;
   left: 541px;
   top: 17px;
   z-index: 4;
-
 }
 
 .modal-form-field::-webkit-input-placeholder {
