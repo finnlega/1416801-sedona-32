@@ -81,94 +81,92 @@
               </a>
             </li>
             <li class="breadcrumbs-item text-block arrow" tabindex="0">
-              <a class="breadcrumbs-link">Гостиницы</a>
+              <a class="breadcrumbs-link" href="#">Гостиницы</a>
             </li>
           </ul>
         </header>
         <section class="catalog-filter">
-          <div class="filter-wrap">
-            <h2 class="visually-hidden">Фильтры:</h2>
-            <form class="catalog-filter-form" action="https://echo.htmlacademy.ru/" method="get">
-              <fieldset class="catalog-filter-group size-group">
-                <legend class="catalog-filter-title">Инфраструктура:</legend>
-                <ul class="catalog-filter-list">
-                  <li class="catalog-filter-item catalog-filter-size">
-                    <label class="control" tabindex="0">
-                      <input class="visually-hidden control-input" type="checkbox" name="pool" checked>
-                      <span class="control-mark"></span>
-                      <span class="control-label">Бассейн</span>
-                    </label>
-                  </li>
-                  <li class="catalog-filter-item catalog-filter-size">
-                    <label class="control" tabindex="0">
-                      <input class="visually-hidden control-input" type="checkbox" name="parking-lot" checked>
-                      <span class="control-mark"></span>
-                      <span class="control-label">Парковка</span>
-                    </label>
-                  </li>
-                  <li class="catalog-filter-item catalog-filter-size">
-                    <label class="control" tabindex="0">
-                      <input class="visually-hidden control-input" type="checkbox" name="wi-fi">
-                      <span class="control-mark"></span>
-                      <span class="control-label">Wi-Fi</span>
-                    </label>
-                  </li>
-                </ul>
-              </fieldset>
-              <fieldset class="catalog-filter-group size-group">
-                <legend class="catalog-filter-title">Тип жилья:</legend>
-                <ul class="catalog-filter-list">
-                  <li class="catalog-filter-item catalog-filter-size">
-                    <label class="control" tabindex="0">
-                      <input class="visually-hidden control-input" type="radio" name="types-housing" value="hotel"
-                        checked>
-                      <span class="control-mark circle"></span>
-                      <span class="control-label">Гостиница</span>
-                    </label>
-                  </li>
-                  <li class="catalog-filter-item catalog-filter-size">
-                    <label class="control" tabindex="0">
-                      <input class="visually-hidden control-input" type="radio" name="types-housing" value="motel">
-                      <span class="control-mark circle"></span>
-                      <span class="control-label">Мотель</span>
-                    </label>
-                  </li>
-                  <li class="catalog-filter-item catalog-filter-size">
-                    <label class="control" tabindex="0">
-                      <input class="visually-hidden control-input" type="radio" name="types-housing" value="apartments">
-                      <span class="control-mark circle"></span>
-                      <span class="control-label">Апартаменты</span>
-                    </label>
-                  </li>
-                </ul>
-              </fieldset>
-              <fieldset class="catalog-filter-group">
-                <legend class="catalog-filter-title range-title">Стоимость, ₽:</legend>
-                <div class="range-wrapper-inputs">
-                  <label class="catalog-filter-label">
-                    <input class="catalog-filter-input input-min" type="number" name="min-cost" placeholder="0"> от
+          <h2 class="visually-hidden">Фильтры:</h2>
+          <form class="catalog-filter-form" action="https://echo.htmlacademy.ru/" method="get">
+            <fieldset class="catalog-filter-group size-group">
+              <legend class="catalog-filter-title">Инфраструктура:</legend>
+              <ul class="catalog-filter-list">
+                <li class="catalog-filter-item catalog-filter-size">
+                  <label class="control" tabindex="0">
+                    <input class="visually-hidden control-input" type="checkbox" name="pool" checked>
+                    <span class="control-mark"></span>
+                    <span class="control-label">Бассейн</span>
                   </label>
-                  <label class="catalog-filter-label">
-                    <input class="catalog-filter-input input-max" type="number" name="max-cost" placeholder="9000"> до
+                </li>
+                <li class="catalog-filter-item catalog-filter-size">
+                  <label class="control" tabindex="0">
+                    <input class="visually-hidden control-input" type="checkbox" name="parking-lot" checked>
+                    <span class="control-mark"></span>
+                    <span class="control-label">Парковка</span>
                   </label>
-                </div>
-                <div class="range-scale">
-                  <div class="range-active" style="left: 0; width: 227px;">
-                    <button class="range-toggle toggle-min" type="button">
-                      <span class="visually-hidden">Изменить минимальную стоимость.</span>
-                    </button>
-                    <button class="range-toggle toggle-max" type="button">
-                      <span class="visually-hidden">Изменить максимальную стоимость.</span>
-                    </button>
-                  </div>
-                </div>
-              </fieldset>
-              <div class="button-box">
-                <button class="button-accept button-small button-filter" type="submit">Применить</button>
-                <button class="button-escape button-filter" type="reset">Сбросить</button>
+                </li>
+                <li class="catalog-filter-item catalog-filter-size">
+                  <label class="control" tabindex="0">
+                    <input class="visually-hidden control-input" type="checkbox" name="wi-fi">
+                    <span class="control-mark"></span>
+                    <span class="control-label">Wi-Fi</span>
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="catalog-filter-group size-group">
+              <legend class="catalog-filter-title">Тип жилья:</legend>
+              <ul class="catalog-filter-list">
+                <li class="catalog-filter-item catalog-filter-size">
+                  <label class="control" tabindex="0">
+                    <input class="visually-hidden control-input" type="radio" name="types-housing" value="hotel"
+                      checked>
+                    <span class="control-mark circle"></span>
+                    <span class="control-label">Гостиница</span>
+                  </label>
+                </li>
+                <li class="catalog-filter-item catalog-filter-size">
+                  <label class="control" tabindex="0">
+                    <input class="visually-hidden control-input" type="radio" name="types-housing" value="motel">
+                    <span class="control-mark circle"></span>
+                    <span class="control-label">Мотель</span>
+                  </label>
+                </li>
+                <li class="catalog-filter-item catalog-filter-size">
+                  <label class="control" tabindex="0">
+                    <input class="visually-hidden control-input" type="radio" name="types-housing" value="apartments">
+                    <span class="control-mark circle"></span>
+                    <span class="control-label">Апартаменты</span>
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="catalog-filter-group">
+              <legend class="catalog-filter-title range-title">Стоимость, ₽:</legend>
+              <div class="range-wrapper-inputs">
+                <label class="catalog-filter-label">
+                  <input class="catalog-filter-input input-min" type="number" name="min-cost" placeholder="0"> от
+                </label>
+                <label class="catalog-filter-label">
+                  <input class="catalog-filter-input input-max" type="number" name="max-cost" placeholder="9000"> до
+                </label>
               </div>
-            </form>
-          </div>
+              <div class="range-scale">
+                <div class="range-active" style="left: 0; width: 227px;">
+                  <button class="range-toggle toggle-min" type="button">
+                    <span class="visually-hidden">Изменить минимальную стоимость.</span>
+                  </button>
+                  <button class="range-toggle toggle-max" type="button">
+                    <span class="visually-hidden">Изменить максимальную стоимость.</span>
+                  </button>
+                </div>
+              </div>
+            </fieldset>
+            <div class="button-box">
+              <button class="button-accept button-small button-filter" type="submit">Применить</button>
+              <button class="button-escape button-filter" type="reset">Сбросить</button>
+            </div>
+          </form>
         </section>
       </div>
       <div class="sorting">
@@ -439,7 +437,7 @@
         </address>
         <a class="footer-link" href="https://htmlacademy.ru/">
           <svg class="footer-logo" aria-hidden="true" focusable="false" width="115" height="34" viewBox="0 0 115 34"
-            role="img" aria-label="Гостиница Седона" fill="none" xmlns="http://www.w3.org/2000/svg">
+            role="img" aria-label="Сайт html academy." fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0 12.8999V15.4999H2.5V12.8999H0Z" fill="" />
             <path
               d="M11.6 4.5C10 4.5 8.80002 5.2 8.00002 6.2H7.90002V0H5.90002V15.5H7.90002V10.2C7.90002 8.1 9.20002 6.6 11.2 6.6C13 6.6 14.1 8 14.1 9.8V15.5H16.1V9.4C16.2 6.4 14.3 4.5 11.6 4.5Z"

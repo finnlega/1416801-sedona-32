@@ -455,7 +455,6 @@ h3.external-list {
   background-position: top 87px center;
 }
 
-
 /* Подписка, поиск гостиницы*/
 
 .search {
@@ -598,6 +597,10 @@ p.subscription-description {
 
 .subscription-button:active {
   color: rgba(255, 255, 255, 0.3)
+}
+
+.subscription-button:disabled {
+  color: rgba(255, 255, 255, 0.2)
 }
 
 .field {
@@ -836,7 +839,6 @@ p.subscription-description {
   align-items: center;
   margin-bottom: 40px;
   padding-left: 65px;
-
 }
 
 .breadcrumbs-item {
@@ -930,15 +932,20 @@ p.subscription-description {
   margin: 0;
   padding: 0;
   border-width: 0;
-
+  overflow: hidden;
 }
 
+.size-group {
+  min-width: 150px;
+}
+
+
 .catalog-filter-group:first-child {
-  margin-right: 67px;
+  width: 217px;
 }
 
 .catalog-filter-group:nth-child(2) {
-  margin-right: 167px;
+  width: 311px;
 }
 
 .catalog-filter-group:nth-child(3) {
@@ -1186,16 +1193,19 @@ p.subscription-description {
   background-image: url("../img/dropdown.svg");
   background-repeat: no-repeat;
   background-size: 12px 7px;
-  display: inline-block;
+  display: block;
   background-position: center left 250px;
+  border: 2px solid #E6E6E6;
+  outline: none;
+  box-shadow:none;
+
 }
 
 .select-control:hover,
 .select-control:focus {
-  outline: none;
   border-radius: 4px;
-  box-shadow: inset 0 0 0 2px #83B3D3;
-  border: none;
+  border: 2px solid #83B3D3;
+  box-sizing: border-box;
 }
 
 .select-control:active {
@@ -1217,6 +1227,7 @@ p.subscription-description {
 
 .catalog-filter-size {
   margin-bottom: 13px;
+  width: 150px;
 }
 
 .catalog-filter-size:last-child {
@@ -1256,6 +1267,12 @@ p.subscription-description {
   color: rgba(255, 255, 255, 0.3)
 }
 
+.button-accept:disabled {
+  background: #68A2CA;
+  outline: none;
+  color: rgba(255, 255, 255, 0.2)
+}
+
 .button-escape {
   font-family: "PT Sans", sans-serif;
   font-style: normal;
@@ -1284,6 +1301,11 @@ p.subscription-description {
   opacity: 0.3;
   outline: none;
 }
+.button-escape:disabled {
+  color: #FFFFFF;
+  outline: none;
+  opacity: 0.2;
+}
 
 .button-filter {
   text-decoration: none;
@@ -1292,7 +1314,7 @@ p.subscription-description {
 
 .sorting {
   display: flex;
-  margin-bottom: 53px; /* 53 */
+  margin-bottom: 53px;
   align-items: center;
   width: 1056px;
   margin-left: auto;
@@ -1773,28 +1795,27 @@ a.pagination-link:active {
   background-size: 12px 7px;
   display: inline-block;
   background-position: center left 125px;
+  box-shadow: none;
+  outline: none;
 }
 
 .pagination-select:focus,
 .pagination-select:hover {
-  outline: none;
   border-radius: 4px;
-  box-shadow: inset 0 0 0 2px #83B3D3;
-  border: none;
+  border: 2px solid #83B3D3;
+  box-sizing: border-box;
 }
 
 .pagination-select:active {
   outline: none;
   color: rgba(51, 51, 51, 0.3);
-  box-shadow: inset 0 0 0 2px #83B3D3;
-  border: none;
+  border: 2px solid #E6E6E6;
 }
 
 .pagination-select:disabled {
   outline: none;
   color: rgba(51, 51, 51, 0.3);
-  box-shadow: inset 0 0 0 2px #E6E6E6;
-  border: none;
+  border: 2px solid #E6E6E6;
 }
 
 .headline-catalog {
@@ -1817,7 +1838,6 @@ a.pagination-link:active {
   right: -183px;
   z-index: 1;
   box-sizing: border-box;
-  border-top: 1px solid #E6E6E6;
   width: 400px;
   min-height: 160px;
   font-family: "PT Sans", sans-serif;
@@ -1859,15 +1879,16 @@ a.pagination-link:active {
     border-radius: 10px;
   }
 
-
 .popover-content {
   position: relative;
   display: flex;
   flex-direction: column;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding: 15px 15px;
+  border-left: 1px solid #E6E6E6;
+  border-right: 1px solid #E6E6E6;
+  border-top: 1px solid #E6E6E6;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 .popover-content::before {
@@ -1875,7 +1896,7 @@ a.pagination-link:active {
   background-image: url("../img/popover-triangle.svg");
   background-repeat: no-repeat;
   left: 188px;
-  top: -8px;
+  top: -9px;
   height: 9px;
   width: 20px;
   content: '';
@@ -2234,6 +2255,12 @@ outline: none;
   color: rgba(255, 255, 255, 0.3);
 }
 
+.modal-search-submit:disabled {
+  outline: none;
+  background: #68A2CA;
+  color: rgba(255, 255, 255, 0.2);
+}
+
 .modal-form-field:disabled {
   background: #E6E6E6;
   outline: none;
@@ -2279,6 +2306,13 @@ outline: none;
 .btn-decrease:active::before,
 .btn-increase:active::after,
 .btn-increase:active::before {
+  background: rgb(0%, 0%, 0%, 0.2);
+  box-shadow: none;
+}
+
+.btn-decrease:disabled::before,
+.btn-increase:disabled::after,
+.btn-increase:disabled::before {
   background: rgb(0%, 0%, 0%, 0.2);
   box-shadow: none;
 }
