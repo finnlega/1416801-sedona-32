@@ -849,6 +849,13 @@ p.subscription-description {
   margin-right: 10px;
 }
 
+.breadcrumbs-link {
+  text-decoration: none;
+  color: #FFFFFF;
+  border: none;
+  outline: none;
+}
+
 .arrow::after {
   position: absolute;
   background-image: url("../img/nav-link.svg");
@@ -932,7 +939,6 @@ p.subscription-description {
   margin: 0;
   padding: 0;
   border-width: 0;
-  overflow: hidden;
 }
 
 .size-group {
